@@ -1,6 +1,6 @@
 {
-    "name": "liturgia_vicenciana",
-    "short_name": "liturgia_vicenciana",
+    "name": "Liturgia Vicenciana",
+    "short_name": "Liturgia Vicenciana",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
