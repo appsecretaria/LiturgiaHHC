@@ -1,0 +1,81 @@
+name: Publicar Flutter Web
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Compilar Flutter Web
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+
+      - name: Instalar Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Descargar dependencias
+        run: flutter pub get
+
+      - name: Comprobar proyecto
+        run: flutter analyze
+        continue-on-error: true
+
+      - name: Calcular ruta de GitHub Pages
+        id: base-path
+        shell: bash
+        run: |
+          REPOSITORY_NAME="${GITHUB_REPOSITORY#*/}"
+
+          if [[ "$REPOSITORY_NAME" == "${GITHUB_REPOSITORY_OWNER}.github.io" ]]; then
+            echo "base_href=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "base_href=/$REPOSITORY_NAME/" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Compilar aplicación web
+        run: >
+          flutter build web
+          --release
+          --base-href "${{ steps.base-path.outputs.base_href }}"
+
+      - name: Preparar navegación
+        run: cp build/web/index.html build/web/404.html
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir aplicación web
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/web
+
+  deploy:
+    name: Publicar en GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4
