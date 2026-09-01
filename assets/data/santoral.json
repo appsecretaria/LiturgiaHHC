@@ -1,0 +1,1327 @@
+[
+  {
+    "mes": 1,
+    "dia": 1,
+    "santos": [
+      "SANTA MARÍA, MADRE DE DIOS"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 2,
+    "santos": [
+      "SANTOS BASILIO MAGNO y GREGORIO NACIANCENO, obispos y doctores de la Iglesia"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 3,
+    "santos": [
+      "SANTÍSIMO NOMBRE DE JESÚS"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 6,
+    "santos": [
+      "EPIFANÍA DEL SEÑOR"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 7,
+    "santos": [
+      "SAN RAIMUNDO DE PEÑAFORT, presbítero"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 9,
+    "santos": [
+      "SAN EULOGIO DE CÓRDOBA, presbítero y mártir"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 13,
+    "santos": [
+      "SAN HILARIO, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 17,
+    "santos": [
+      "SAN ANTONIO, abad"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 20,
+    "santos": [
+      "SANTOS FRUCTUOSO, obispo, y AUGURIO y EULOGIO, diáconos, mártires",
+      "SAN FABIÁN, papa y mártir",
+      "SAN SEBASTIÁN, mártir"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 21,
+    "santos": [
+      "SANTA INÉS, virgen y mártir"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 22,
+    "santos": [
+      "SAN VICENTE, diácono y mártir"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 23,
+    "santos": [
+      "SAN ILDEFONSO, obispo"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 26,
+    "santos": [
+      "SANTOS TIMOTEO y TITO, obispos"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 27,
+    "santos": [
+      "SANTA ÁNGELA DE MÉRICI, virgen"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 28,
+    "santos": [
+      "SANTO TOMÁS DE AQUINO, presbítero y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 1,
+    "dia": 31,
+    "santos": [
+      "SAN JUAN BOSCO, presbítero"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 2,
+    "santos": [
+      "PRESENTACIÓN DEL SEÑOR"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 3,
+    "santos": [
+      "SAN BLAS, obispo y mártir",
+      "SAN ÓSCAR, obispo"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 5,
+    "santos": [
+      "SANTA ÁGUEDA, virgen y mártir"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 6,
+    "santos": [
+      "SANTOS PABLO MIKI y compañeros, mártires"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 10,
+    "santos": [
+      "SANTA ESCOLÁSTICA, virgen"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 11,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DE LOURDES"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 21,
+    "santos": [
+      "SAN PEDRO DAMIANI, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 23,
+    "santos": [
+      "SAN POLICARPO, obispo y mártir"
+    ]
+  },
+  {
+    "mes": 2,
+    "dia": 27,
+    "santos": [
+      "SAN GREGORIO DE NAREK, abad y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 3,
+    "dia": 4,
+    "santos": [
+      "SAN CASIMIRO"
+    ]
+  },
+  {
+    "mes": 3,
+    "dia": 7,
+    "santos": [
+      "SANTAS PERPETUA y FELICIDAD, mártires"
+    ]
+  },
+  {
+    "mes": 3,
+    "dia": 9,
+    "santos": [
+      "SANTA FRANCISCA ROMANA, religiosa"
+    ]
+  },
+  {
+    "mes": 3,
+    "dia": 17,
+    "santos": [
+      "SAN PATRICIO, obispo"
+    ]
+  },
+  {
+    "mes": 3,
+    "dia": 18,
+    "santos": [
+      "SAN CIRILO DE JERUSALÉN, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 3,
+    "dia": 19,
+    "santos": [
+      "SAN JOSÉ, ESPOSO DE LA BIENAVENTURADA VIRGEN MARÍA"
+    ]
+  },
+  {
+    "mes": 3,
+    "dia": 23,
+    "santos": [
+      "SANTO TORIBIO DE MOGROVEJO, obispo"
+    ]
+  },
+  {
+    "mes": 3,
+    "dia": 25,
+    "santos": [
+      "ANUNCIACIÓN DEL SEÑOR"
+    ]
+  },
+  {
+    "mes": 4,
+    "dia": 13,
+    "santos": [
+      "SAN MARTÍN I, papa y mártir",
+      "SAN HERMENEGILDO, mártir"
+    ]
+  },
+  {
+    "mes": 4,
+    "dia": 21,
+    "santos": [
+      "SAN ANSELMO, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 4,
+    "dia": 23,
+    "santos": [
+      "SAN JORGE, mártir",
+      "SAN ADALBERTO, obispo y mártir"
+    ]
+  },
+  {
+    "mes": 4,
+    "dia": 24,
+    "santos": [
+      "SAN FIDEL DE SIGMARINGA, presbítero y mártir"
+    ]
+  },
+  {
+    "mes": 4,
+    "dia": 25,
+    "santos": [
+      "SAN MARCOS, evangelista"
+    ]
+  },
+  {
+    "mes": 4,
+    "dia": 28,
+    "santos": [
+      "SAN PEDRO CHANEL, presbítero y mártir",
+      "SAN LUIS MARÍA GRIGNION DE MONTFORT, presbítero"
+    ]
+  },
+  {
+    "mes": 4,
+    "dia": 29,
+    "santos": [
+      "SANTA CATALINA DE SIENA, virgen y doctora de la Iglesia, patrona de Europa"
+    ]
+  },
+  {
+    "mes": 4,
+    "dia": 30,
+    "santos": [
+      "SAN PÍO V, papa"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 1,
+    "santos": [
+      "SAN JOSÉ OBRERO"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 12,
+    "santos": [
+      "SANTOS NEREO y AQUILES, mártires",
+      "SAN PANCRACIO, mártir"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 13,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DE FÁTIMA"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 14,
+    "santos": [
+      "SAN MATÍAS, apóstol"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 15,
+    "santos": [
+      "SAN ISIDRO LABRADOR"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 18,
+    "santos": [
+      "SAN JUAN I, papa y mártir"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 20,
+    "santos": [
+      "SAN BERNARDINO DE SIENA, presbítero"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 21,
+    "santos": [
+      "SANTOS CRISTÓBAL MAGALLANES, presbítero, y compañeros, mártires"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 22,
+    "santos": [
+      "SANTA JOAQUINA VEDRUNA, religiosa",
+      "SANTA RITA DE CASIA, religiosa"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 26,
+    "santos": [
+      "SAN FELIPE NERI, presbítero"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 27,
+    "santos": [
+      "SAN AGUSTÍN DE CANTERBURY, obispo"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 29,
+    "santos": [
+      "SAN PABLO VI, papa"
+    ]
+  },
+  {
+    "mes": 5,
+    "dia": 30,
+    "santos": [
+      "SAN FERNANDO"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 1,
+    "santos": [
+      "SAN JUSTINO, mártir"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 2,
+    "santos": [
+      "SANTOS MARCELINO Y PEDRO, mártires"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 3,
+    "santos": [
+      "SANTOS CARLOS LUANGA y compañeros, mártires"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 5,
+    "santos": [
+      "SAN BONIFACIO, obispo y mártir"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 6,
+    "santos": [
+      "SAN NORBERTO, obispo"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 9,
+    "santos": [
+      "SAN EFRÉN, diácono y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 11,
+    "santos": [
+      "SAN BERNABÉ, apóstol"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 15,
+    "santos": [
+      "SANTA MARÍA MICAELA DEL SANTÍSIMO SACRAMENTO, virgen"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 19,
+    "santos": [
+      "SAN ROMUALDO, abad"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 22,
+    "santos": [
+      "SAN PAULINO DE NOLA, obispo",
+      "SANTOS JUAN FISHER, obispo, y TOMÁS MORO, mártires"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 24,
+    "santos": [
+      "NATIVIDAD DE SAN JUAN BAUTISTA"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 26,
+    "santos": [
+      "SAN PELAYO, mártir"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 27,
+    "santos": [
+      "SAN CIRILO DE ALEJANDRÍA, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 29,
+    "santos": [
+      "SANTOS PEDRO y PABLO, apóstoles"
+    ]
+  },
+  {
+    "mes": 6,
+    "dia": 30,
+    "santos": [
+      "SANTOS PROTOMÁRTIRES DE LA SANTA IGLESIA ROMANA"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 3,
+    "santos": [
+      "SANTO TOMÁS, apóstol"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 4,
+    "santos": [
+      "SANTA ISABEL DE PORTUGAL"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 6,
+    "santos": [
+      "SANTA MARÍA GORETTI, virgen y mártir"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 9,
+    "santos": [
+      "SANTOS AGUSTÍN ZHAO RONG, presbítero, y compañeros, mártires"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 11,
+    "santos": [
+      "SAN BENITO, abad, patrono de Europa"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 13,
+    "santos": [
+      "SAN ENRIQUE"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 14,
+    "santos": [
+      "SAN CAMILO DE LELIS, presbítero"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 15,
+    "santos": [
+      "SAN BUENAVENTURA, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 16,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DEL MONTE CARMELO"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 20,
+    "santos": [
+      "SAN APOLINAR, obispo y mártir"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 21,
+    "santos": [
+      "SAN LORENZO DE BRINDIS, presbítero y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 22,
+    "santos": [
+      "SANTA MARÍA MAGDALENA"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 23,
+    "santos": [
+      "SANTA BRÍGIDA, religiosa, patrona de Europa"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 24,
+    "santos": [
+      "SAN SARBELIO MAKHLÛF, presbítero"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 25,
+    "santos": [
+      "SANTIAGO, APÓSTOL, patrono de España"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 29,
+    "santos": [
+      "SANTOS MARTA, MARÍA Y LÁZARO"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 30,
+    "santos": [
+      "SAN PEDRO CRISÓLOGO, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 7,
+    "dia": 31,
+    "santos": [
+      "SAN IGNACIO DE LOYOLA, presbítero"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 4,
+    "santos": [
+      "SAN JUAN MARÍA VIANNEY, presbítero"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 6,
+    "santos": [
+      "TRANSFIGURACIÓN DEL SEÑOR"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 7,
+    "santos": [
+      "SANTOS SIXTO II, papa, y compañeros, mártires",
+      "SAN CAYETANO, presbítero"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 10,
+    "santos": [
+      "SAN LORENZO, diácono y mártir"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 11,
+    "santos": [
+      "SANTA CLARA, virgen"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 12,
+    "santos": [
+      "SANTA JUANA FRANCISCA DE CHANTAL, religiosa"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 13,
+    "santos": [
+      "SANTOS PONCIANO, papa, e HIPÓLITO, presbítero, mártires"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 15,
+    "santos": [
+      "ASUNCIÓN DE LA BIENAVENTURADA VIRGEN MARÍA"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 19,
+    "santos": [
+      "SAN JUAN EUDES, presbítero",
+      "SAN EZEQUIEL MORENO DÍAZ, obispo"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 20,
+    "santos": [
+      "SAN BERNARDO, abad y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 21,
+    "santos": [
+      "SAN PÍO X, papa"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 24,
+    "santos": [
+      "SAN BARTOLOMÉ, apóstol"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 25,
+    "santos": [
+      "SAN LUIS DE FRANCIA",
+      "SAN JOSÉ DE CALASANZ, presbítero"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 26,
+    "santos": [
+      "SANTA TERESA DE JESÚS JORNET E IBARS, virgen"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 27,
+    "santos": [
+      "SANTA MÓNICA"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 28,
+    "santos": [
+      "SAN AGUSTÍN, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 29,
+    "santos": [
+      "MARTIRIO DE SAN JUAN BAUTISTA"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 30,
+    "santos": [
+      "S. PAMAQUIO, senador (340-410)"
+    ]
+  },
+  {
+    "mes": 8,
+    "dia": 31,
+    "santos": [
+      "S. RAMÓN NONATO, religioso (1200-1240)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 1,
+    "santos": [
+      "S. EGIDIO (Gil), Abad",
+      "S. GEDEÓN Juez de Israel (A. T.)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 2,
+    "santos": [
+      "Btos. PEDRO RENATO y compañeros mártires",
+      "TEODORA DE ALEJANDRÍA, penitente (S. V)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 3,
+    "santos": [
+      "SAN GREGORIO MAGNO, papa y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 4,
+    "santos": [
+      "Sta. ROSA DE VITERBO, virgen",
+      "MOISÉS (s. XII a. de C.)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 5,
+    "santos": [
+      "Sta. OBDULIA, virgen",
+      "SANTA TERESA DE CALCUTA, virgen"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 6,
+    "santos": [
+      "S. PEDRO CLAVER, presbítero",
+      "NTRA. SRA. DE GUADALUPE"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 7,
+    "santos": [
+      "Sta. REGINA, virgen y mártir (s. III)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 8,
+    "santos": [
+      "NATIVIDAD DE LA BIENAVENTURADA VIRGEN MARÍA"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 9,
+    "santos": [
+      "Bto. FEDERICO OZANAM, laico",
+      "Sta. MARÍA DE LA CABEZA"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 10,
+    "santos": [
+      "S. NICOLÁS DE TOLENTINO, confesor (1245-1305)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 11,
+    "santos": [
+      "S. JUAN GABRIEL PERBOYRE, presbítero y mártir"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 12,
+    "santos": [
+      "DULCE NOMBRE DE MARÍA"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 13,
+    "santos": [
+      "S. JUAN CRISÓSTOMO, obispo y doctor de la Iglesia (350-407"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 14,
+    "santos": [
+      "EXALTACIÓN DE LA SANTA CRUZ"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 15,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DE LOS DOLORES"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 16,
+    "santos": [
+      "SANTOS CORNELIO, papa (251-252), y CIPRIANO, obispo y doctor de la Iglesia (200-257), mártires"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 17,
+    "santos": [
+      "SAN ROBERTO BELARMINO, obispo y doctor de la Iglesia (1542-1621)",
+      "SANTA HILDEGARDA DE BINGEN, virgen y doctora de la Iglesia"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 18,
+    "santos": [
+      "S. JOSÉ DE CUPERTINO, presbíteron y mártir (1603-1663)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 19,
+    "santos": [
+      "S. JENARO, obispo y mártir († 305)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 20,
+    "santos": [
+      "S. ANDRÉS KIM TAEGON, presbítero",
+      "PABLO CHONG HASANG, laico, y compañeros mártires (s. XIX)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 21,
+    "santos": [
+      "SAN MATEO, apóstol y evangelista"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 22,
+    "santos": [
+      "S. MAURICIO y compañeros mártires (s. III)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 23,
+    "santos": [
+      "Sta. TECLA, virgen y mártir (s. I)",
+      "S. PÍO DE PIETRELCINA, presbítero (1887-1968)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 24,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DE LA MERCED"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 25,
+    "santos": [
+      "S. CLEOFÁS, discípulo del Señor y mártir (s. I)",
+      "El Santo Niño de La Guardia, mártir († 1489)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 26,
+    "santos": [
+      "Stos. COSME y DAMIÁN, mártires († 300)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 27,
+    "santos": [
+      "SAN VICENTE DE PAÚL, presbítero y fundador (1581-1660)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 28,
+    "santos": [
+      "S. WENCESLAO, mártir y rey rey (907-928)",
+      "Stos. LORENZO RUIZ y compañeros, mártires (1633-1637)"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 29,
+    "santos": [
+      "Stos. ARCÁNGELES MIGUEL, GABRIEL y RAFAEL"
+    ]
+  },
+  {
+    "mes": 9,
+    "dia": 30,
+    "santos": [
+      "S. JERÓNIMO, presbítero y doctor de la Iglesia (340-420)"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 1,
+    "santos": [
+      "SANTA TERESA DEL NIÑO JESÚS, virgen y doctora de la Iglesia"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 2,
+    "santos": [
+      "SANTOS ÁNGELES CUSTODIOS"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 3,
+    "santos": [
+      "SAN FRANCISCO DE BORJA, presbítero"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 6,
+    "santos": [
+      "SAN BRUNO, presbítero"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 7,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DEL ROSARIO"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 8,
+    "santos": [
+      "SANTA FAUSTINA KOWALSKA, virgen"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 9,
+    "santos": [
+      "SANTOS DIONISIO, obispo, y compañeros, mártires",
+      "SAN JUAN LEONARDI, presbítero"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 10,
+    "santos": [
+      "SANTO TOMÁS DE VILLANUEVA, obispo"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 12,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DEL PILAR"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 14,
+    "santos": [
+      "SAN CALIXTO I, papa y mártir"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 15,
+    "santos": [
+      "SANTA TERESA DE JESÚS, virgen y doctora de la Iglesia"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 16,
+    "santos": [
+      "SANTA EDUVIGIS, religiosa",
+      "SANTA MARGARITA MARÍA DE ALACOQUE, virgen"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 19,
+    "santos": [
+      "SAN PEDRO DE ALCÁNTARA, presbítero",
+      "SANTOS JUAN DE BRÉBEUF e ISAAC JOGUES, presbíteros, y compañeros, mártires",
+      "SAN PABLO DE LA CRUZ, presbítero"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 22,
+    "santos": [
+      "SAN JUAN PABLO II, papa"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 23,
+    "santos": [
+      "SAN JUAN DE CAPISTRANO, presbítero"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 24,
+    "santos": [
+      "SAN ANTONIO MARÍA CLARET, obispo"
+    ]
+  },
+  {
+    "mes": 10,
+    "dia": 28,
+    "santos": [
+      "SANTOS SIMÓN y JUDAS, apóstoles"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 1,
+    "santos": [
+      "TODOS LOS SANTOS"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 2,
+    "santos": [
+      "CONMEMORACIÓN DE TODOS LOS FIELES DIFUNTOS"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 3,
+    "santos": [
+      "SAN MARTÍN DE PORRES, religioso"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 4,
+    "santos": [
+      "SAN CARLOS BORROMEO, obispo"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 5,
+    "santos": [
+      "SANTA ÁNGELA DE LA CRUZ GUERRERO GONZÁLEZ, virgen"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 6,
+    "santos": [
+      "SANTOS PEDRO POVEDA CASTROVERDE e INOCENCIO DE LA INMACULADA CANOURA ARNAU, presbíteros, y compañeros, mártires"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 9,
+    "santos": [
+      "DEDICACIÓN DE LA BASÍLICA DE LETRÁN"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 10,
+    "santos": [
+      "SAN LEÓN MAGNO, papa y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 11,
+    "santos": [
+      "SAN MARTÍN DE TOURS, obispo"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 12,
+    "santos": [
+      "SAN JOSAFAT, obispo y mártir"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 13,
+    "santos": [
+      "SAN LEANDRO, obispo"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 16,
+    "santos": [
+      "SANTA MARGARITA DE ESCOCIA",
+      "SANTA GERTRUDIS, virgen"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 17,
+    "santos": [
+      "SANTA ISABEL DE HUNGRÍA, religiosa"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 21,
+    "santos": [
+      "PRESENTACIÓN DE LA BIENAVENTURADA VIRGEN MARÍA"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 23,
+    "santos": [
+      "SAN CLEMENTE I, papa y mártir",
+      "SAN COLUMBANO, abad"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 24,
+    "santos": [
+      "SANTOS ANDRÉS DUNG-LAC, presbítero, y compañeros, mártires"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 25,
+    "santos": [
+      "SANTA CATALINA DE ALEJANDRÍA, virgen y mártir"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 30,
+    "santos": [
+      "SAN ANDRÉS, apóstol"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 3,
+    "santos": [
+      "SAN FRANCISCO JAVIER, presbítero"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 4,
+    "santos": [
+      "SAN JUAN DAMASCENO, presbítero y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 8,
+    "santos": [
+      "INMACULADA CONCEPCIÓN DE LA"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 9,
+    "santos": [
+      "SAN JUAN DIEGO CUAUHTLATOATZIN"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 10,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DE LORETO",
+      "SANTA EULALIA DE MÉRIDA, virgen y mártir"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 11,
+    "santos": [
+      "SAN DÁMASO I, papa"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 12,
+    "santos": [
+      "BIENAVENTURADA VIRGEN MARÍA DE GUADALUPE"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 14,
+    "santos": [
+      "SAN JUAN DE LA CRUZ, presbítero y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 21,
+    "santos": [
+      "SAN PEDRO CANISIO, presbítero y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 23,
+    "santos": [
+      "SAN JUAN DE KETY, presbítero"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 26,
+    "santos": [
+      "SAN ESTEBAN, protomártir"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 28,
+    "santos": [
+      "LOS SANTOS INOCENTES, mártires"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 29,
+    "santos": [
+      "SANTO TOMÁS BECKET, obispo y mártir"
+    ]
+  },
+  {
+    "mes": 12,
+    "dia": 31,
+    "santos": [
+      "SAN SILVESTRE I, papa"
+    ]
+  }
+]
