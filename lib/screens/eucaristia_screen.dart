@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/celebracion.dart';
 import '../services/eucaristia_service.dart';
+import '../main.dart';
 
 class EucaristiaScreen extends StatefulWidget {
   final Celebracion celebracion;
@@ -13,12 +14,15 @@ class EucaristiaScreen extends StatefulWidget {
 }
 
 class _EucaristiaScreenState extends State<EucaristiaScreen> {
-  double tamanoTexto = 18;
+  late double tamanoTexto;
   bool modoOscuro = false;
 
   @override
   Widget build(BuildContext context) {
     final eucaristia = obtenerEucaristia(widget.celebracion);
+
+    final settings = AppSettingsScope.of(context);
+    tamanoTexto = settings.tamanoTexto;
 
     if (eucaristia == null) {
       return Scaffold(
@@ -50,9 +54,7 @@ class _EucaristiaScreenState extends State<EucaristiaScreen> {
               tooltip: 'Disminuir texto',
               onPressed: () {
                 if (tamanoTexto > 14) {
-                  setState(() {
-                    tamanoTexto--;
-                  });
+                  settings.cambiarTamanoTexto(tamanoTexto - 2);
                 }
               },
               icon: const Icon(Icons.text_decrease),
@@ -61,9 +63,7 @@ class _EucaristiaScreenState extends State<EucaristiaScreen> {
               tooltip: 'Aumentar texto',
               onPressed: () {
                 if (tamanoTexto < 30) {
-                  setState(() {
-                    tamanoTexto++;
-                  });
+                  settings.cambiarTamanoTexto(tamanoTexto + 2);
                 }
               },
               icon: const Icon(Icons.text_increase),

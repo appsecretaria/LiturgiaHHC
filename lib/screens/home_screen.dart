@@ -4,6 +4,7 @@ import '../services/celebracion_service.dart';
 import '../services/santoral_service.dart';
 import 'celebracion_screen.dart';
 import '../utils/navegacion.dart';
+import '../main.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -526,8 +527,89 @@ class AjustesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: Center(child: Text('Ajustes', style: TextStyle(fontSize: 28))),
+    final settings = AppSettingsScope.of(context);
+
+    return SafeArea(
+      child: ListView(
+        padding: const EdgeInsets.all(24),
+        children: [
+          const SizedBox(height: 14),
+
+          const Text(
+            'Ajustes',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          ),
+
+          const SizedBox(height: 36),
+
+          Text(
+            'Lectura',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
+
+          const SizedBox(height: 12),
+
+          const Text(
+            'Tamaño del texto',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          ),
+
+          const SizedBox(height: 8),
+
+          RadioListTile<double>(
+            title: const Text('Pequeño'),
+            subtitle: const Text('16'),
+            value: 16,
+            groupValue: settings.tamanoTexto,
+            onChanged: (value) {
+              if (value != null) {
+                settings.cambiarTamanoTexto(value);
+              }
+            },
+          ),
+
+          RadioListTile<double>(
+            title: const Text('Normal'),
+            subtitle: const Text('18'),
+            value: 18,
+            groupValue: settings.tamanoTexto,
+            onChanged: (value) {
+              if (value != null) {
+                settings.cambiarTamanoTexto(value);
+              }
+            },
+          ),
+
+          RadioListTile<double>(
+            title: const Text('Grande'),
+            subtitle: const Text('20'),
+            value: 20,
+            groupValue: settings.tamanoTexto,
+            onChanged: (value) {
+              if (value != null) {
+                settings.cambiarTamanoTexto(value);
+              }
+            },
+          ),
+
+          RadioListTile<double>(
+            title: const Text('Muy grande'),
+            subtitle: const Text('22'),
+            value: 22,
+            groupValue: settings.tamanoTexto,
+            onChanged: (value) {
+              if (value != null) {
+                settings.cambiarTamanoTexto(value);
+              }
+            },
+          ),
+        ],
+      ),
     );
   }
 }

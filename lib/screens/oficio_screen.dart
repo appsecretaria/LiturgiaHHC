@@ -12,6 +12,7 @@ import '../data/himnos_san_vicente.dart';
 import '../data/himnos_federico_ozanam.dart';
 import '../models/tipo_oficio.dart';
 import '../services/oficio_service.dart';
+import '../main.dart';
 
 class OficioScreen extends StatefulWidget {
   final Celebracion celebracion;
@@ -30,8 +31,8 @@ class OficioScreen extends StatefulWidget {
 class _OficioScreenState extends State<OficioScreen> {
   bool mostrarHimnosCantados = false;
   int? himnoSeleccionado;
-  double tamanoTexto = 18;
   bool modoOscuro = false;
+  late double tamanoTexto;
   final AudioPlayer _audioPlayer = AudioPlayer();
   bool reproduciendo = false;
   Duration posicionAudio = Duration.zero;
@@ -126,6 +127,9 @@ class _OficioScreenState extends State<OficioScreen> {
     final celebracion = widget.celebracion;
     final oficio = obtenerOficio(widget.celebracion, widget.tipo);
 
+    final settings = AppSettingsScope.of(context);
+    tamanoTexto = settings.tamanoTexto;
+
     final List<Himno> himnosDisponibles;
 
     if (celebracion.mes == 9 && celebracion.dia == 27) {
@@ -208,11 +212,9 @@ class _OficioScreenState extends State<OficioScreen> {
                     IconButton(
                       tooltip: 'Disminuir texto',
                       onPressed: () {
-                        setState(() {
-                          if (tamanoTexto > 14) {
-                            tamanoTexto -= 2;
-                          }
-                        });
+                        if (tamanoTexto > 14) {
+                          settings.cambiarTamanoTexto(tamanoTexto - 2);
+                        }
                       },
                       icon: Image.asset(
                         modoOscuro
@@ -240,11 +242,9 @@ class _OficioScreenState extends State<OficioScreen> {
                     IconButton(
                       tooltip: 'Aumentar texto',
                       onPressed: () {
-                        setState(() {
-                          if (tamanoTexto < 30) {
-                            tamanoTexto += 2;
-                          }
-                        });
+                        if (tamanoTexto < 30) {
+                          settings.cambiarTamanoTexto(tamanoTexto + 2);
+                        }
                       },
                       icon: Image.asset(
                         modoOscuro
