@@ -3,6 +3,8 @@ import '../models/oficio.dart';
 import '../models/tipo_oficio.dart';
 import '../data/oficios_san_vicente.dart';
 import '../data/oficios_2sep.dart';
+import '../data/oficios_9sep.dart';
+import '../data/oficios_11sep.dart';
 
 Oficio? obtenerOficio(Celebracion celebracion, TipoOficio tipo) {
   // Mártires franceses 2 septiembre
@@ -18,7 +20,33 @@ Oficio? obtenerOficio(Celebracion celebracion, TipoOficio tipo) {
         return visperasMartires2Sep;
     }
   }
-  // San Vicente de Paúl
+  // Federico Ozanam 9 septiembre
+  if (celebracion.mes == 9 && celebracion.dia == 9) {
+    switch (tipo) {
+      case TipoOficio.primerasVisperas:
+        return null;
+
+      case TipoOficio.laudes:
+        return laudesFedericoOzanam9Sep;
+
+      case TipoOficio.segundasVisperas:
+        return visperasFedericoOzanam9Sep;
+    }
+  }
+  // Juan Gabriel Perboyre 11 septiembre
+  if (celebracion.mes == 9 && celebracion.dia == 11) {
+    switch (tipo) {
+      case TipoOficio.primerasVisperas:
+        return null;
+
+      case TipoOficio.laudes:
+        return laudesSanJuanGabrielPerboyre11Sep;
+
+      case TipoOficio.segundasVisperas:
+        return visperasSanJuanGabrielPerboyre11Sep;
+    }
+  }
+  // San Vicente de Paúl 27 septiembre
   if (celebracion.mes == 9 && celebracion.dia == 27) {
     switch (tipo) {
       case TipoOficio.primerasVisperas:

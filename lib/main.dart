@@ -1,9 +1,32 @@
 import 'package:flutter/material.dart';
 
 import 'screens/splash_screen.dart';
+import 'settings/app_settings.dart';
 
 void main() {
-  runApp(const LiturgiaVicencianaApp());
+  runApp(
+    AppSettingsScope(
+      settings: AppSettings(),
+      child: const LiturgiaVicencianaApp(),
+    ),
+  );
+}
+
+class AppSettingsScope extends InheritedNotifier<AppSettings> {
+  const AppSettingsScope({
+    super.key,
+    required AppSettings settings,
+    required super.child,
+  }) : super(notifier: settings);
+
+  static AppSettings of(BuildContext context) {
+    final scope = context
+        .dependOnInheritedWidgetOfExactType<AppSettingsScope>();
+
+    assert(scope != null, 'AppSettingsScope no encontrado');
+
+    return scope!.notifier!;
+  }
 }
 
 class LiturgiaVicencianaApp extends StatelessWidget {

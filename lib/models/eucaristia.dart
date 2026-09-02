@@ -15,6 +15,7 @@ class Eucaristia {
   final String? oracionColectaAlternativa;
 
   final String primeraLecturaTitulo;
+  final String? rubricaLecturas;
   final String primeraLecturaEncabezado;
   final String primeraLecturaReferencia;
   final String primeraLectura;
@@ -72,6 +73,7 @@ class Eucaristia {
     this.oracionColectaAlternativa,
 
     required this.primeraLecturaTitulo,
+    this.rubricaLecturas,
     required this.primeraLecturaEncabezado,
     required this.primeraLecturaReferencia,
     required this.primeraLectura,

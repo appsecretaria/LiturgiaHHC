@@ -17,7 +17,7 @@ const celebracionesVicencianas = <Celebracion>[
 
     primerasVisperas: false,
     laudes: true,
-    eucaristia: false,
+    eucaristia: true,
     segundasVisperas: true,
     lecturaEspiritual: true,
 
@@ -132,6 +132,260 @@ Pero, padre, ¿qué hacer para ello? Es menester que esas cinco virtudes sean co
 Procuremos cada uno encerrarnos en estas cinco virtudes lo mismo que los caracoles en sus conchas, y hagamos que nuestras acciones sean expresión de estas virtudes. Será buen misionero el que así lo haga; el que no, no lo será, como yo, miserable de mí, que sólo soy polvo y suciedad.
 
 ¡Oh Salvador, Señor, Dios mío! Tú trajiste del cielo a la tierra esta doctrina, la recomendaste a los hombres y la enseñaste a los apóstoles, a quienes, entre los consejos que les diste, les dijiste que esta doctrina es como la base del cristianismo y que todo lo que no se cimiente en ella estará cimentado sobre arena; llénanos de este espíritu. Señor Dios mío, que has sellado con este espíritu a esta pequeña compañía, espíritu tan necesario para que responda a su vocación, tú eres su autor; me atrevo, Señor, a decir que sólo tú serás el culpable de que no lo tengamos, ya que todos nosotros ardemos en el deseo de poseerlo. Dispón nuestros corazones a recibir este espíritu. Tú eres, Señor, el que has suscitado esta compañía; tú eres su origen. Se nota, hermanos míos, algún progreso en la compañía; parece que reinan en ella estas cinco virtudes, si no en el grado en que las tuvieron nuestro Señor, los apóstoles y los primeros cristianos, al menos en estado incipiente, que seguirá adelante si procuramos conformar todas nuestras acciones a estas máximas evangélicas. Este es, padres, el fin por el que nos hemos hecho misioneros: ser sencillos, humildes, mansos, mortificados y celosos por la gloria de Dios. Es lo que hemos de pedirle y lo que hemos de esperar de su divina bondad; si lo creéis conveniente, hacemos mañana todos juntos la oración sobre este tema y espero que todos recibiremos en ello mucho consuelo. ¡Qué Dios nos conceda esta gracia!''',
+      ),
+    ],
+  ), // 2 Septiembre
+
+  Celebracion(
+    // 9 de septiembre
+    mes: 9,
+    dia: 9,
+    nombre: 'Beato Federico Ozanam, laico',
+    tipo: 'Memoria',
+    imagen: 'assets/images/Ozanam.jpg',
+
+    rubrica: 'BEATO FEDERICO OZANAM',
+
+    descripcion:
+        'Fundador de las Conferencias de San Vicente de Paúl, '
+        'esposo y padre de familia',
+
+    primerasVisperas: false,
+    laudes: true,
+    eucaristia: true,
+    segundasVisperas: true,
+    lecturaEspiritual: true,
+
+    informacion: [
+      ApartadoInformacion(
+        titulo: 'Biografía breve',
+        contenido:
+            'El beato Federico Ozanam nació en Milán el 23 de abril de '
+            '1813 y pasó casi toda su vida en Francia. Fue uno de los '
+            'fundadores de las Conferencias de San Vicente de Paúl para '
+            'asistir a los pobres. Profesor de la Universidad de la '
+            'Sorbona, en París, se distinguió por su ciencia y, por medio '
+            'de la cultura, defendió y comunicó las verdades de la fe. '
+            'Casado, fue buen esposo y padre de familia e hizo de su hogar '
+            'una Iglesia doméstica. Vivió siempre en íntimo contacto con '
+            'Dios, siendo para muchos modelo de virtudes cristianas. Murió '
+            'en Marsella, tras una larga enfermedad, el 8 de septiembre de '
+            '1853. Fue beatificado por san Juan Pablo II en París, el 22 '
+            'de agosto de 1997.',
+      ),
+    ],
+
+    lecturasEspirituales: [
+      LecturaEspiritual(
+        titulo: 'A los pobres los tenemos delante de nosotros',
+
+        encabezado: 'De las cartas del beato Federico Ozanam',
+
+        referencia:
+            'Carta a Luis Janmot, 3 de noviembre de 1836. '
+            'De las cartas de Federico Ozanam, Cartas de la juventud, '
+            'vol. 1, pp. 243-244',
+
+        subtitulo: 'A los pobres los tenemos delante de nosotros',
+
+        contenido:
+            'Los santos eran locos de amor. Su amor sin medida abrazaba '
+            'a Dios, a la humanidad y a la naturaleza; y, considerando '
+            'que Dios se había hecho pobre para vivir en la tierra, que '
+            'una gran parte de la humanidad es pobre y que la misma '
+            'naturaleza, en medio de su gran esplendor, es pobre por '
+            'cuanto está sometida a la muerte, ellos, los santos, han '
+            'querido ser pobres; es propio del amor hacerse semejante, '
+            'en cuanto es posible, a las cosas amadas.\n\n'
+            'Y nosotros, amigos carísimos, ¿no haremos nada por '
+            'asemejarnos a los santos a quienes amamos, contentándonos '
+            'con lamentar la frialdad de los tiempos presentes, mientras '
+            'cada uno de nosotros lleva en su corazón un germen de '
+            'santidad que, con solo quererlo, podría fructificar? Si no '
+            'sabemos amar a Dios como lo amaban los santos, esto debe ser '
+            'para nosotros un motivo de reproche, aunque nuestra debilidad '
+            'podría darnos un motivo de excusa, dado que parece que para '
+            'amar hace falta ver, y nosotros vemos a Dios solo con los '
+            'ojos de la fe, y nuestra fe ¡es tan débil! Pero a los pobres, '
+            'a los pobres que vemos con una mirada humana, los tenemos '
+            'delante de nosotros; podemos tocar sus llagas con nuestras '
+            'manos y ver las heridas de la corona de espinas en su cabeza. '
+            'Siendo así que no podemos menos de creer, debemos postrarnos '
+            'a sus pies y decirles con el apóstol: «¡Señor mío y Dios '
+            'mío!». Ustedes son nuestros amos y nosotros sus siervos; '
+            'ustedes son la imagen sagrada de este Dios a quien no vemos '
+            'y, no pudiendo amarlo de otro modo, lo amaremos en su '
+            'persona.\n\n'
+            'Si en la Edad Media la sociedad enferma no pudo ser curada '
+            'más que por una gran efusión de amor, sobre todo de parte de '
+            'san Francisco de Asís; y más tarde nuevos sufrimientos '
+            'exigieron la intervención de la mano de san Felipe Neri, de '
+            'san Juan de Dios y de san Vicente de Paúl, ¿qué necesidad no '
+            'habrá hoy de caridad, de liberalidad y de paciencia para '
+            'remediar los sufrimientos de la gente pobre, más pobre que '
+            'nunca, por haber rehusado el sustento del alma precisamente '
+            'cuando venía a faltarles el sustento material?\n\n'
+            'El problema que divide a los hombres de hoy no es de orden '
+            'político, sino de orden social. Se trata de saber quién '
+            'resultará vencedor: si el espíritu de egoísmo o el espíritu '
+            'de sacrificio; y de si la sociedad será una sociedad de '
+            'lucro siempre mayor en provecho de los más fuertes, o de '
+            'dedicación de cada uno al bien de todos y, sobre todo, a la '
+            'defensa de los más débiles. Muchos tienen demasiado y '
+            'todavía quieren tener más; otros no tienen lo suficiente o '
+            'no tienen nada, y quieren obtener por la fuerza lo que no '
+            'se les da. Se prepara una guerra entre estas dos clases y '
+            'amenaza con ser terrible: de una parte, el poder de la '
+            'riqueza; de la otra, la fuerza de la desesperación. Nosotros '
+            'debemos interponernos entre estas dos partes, si no para '
+            'impedir el choque, al menos para suavizar la confrontación. '
+            'Nuestra juventud y nuestra modesta condición pueden hacernos '
+            'más fácil la tarea de ser mediadores, que nuestra condición '
+            'de cristianos parece exigirnos como obligatoria. He aquí la '
+            'posible utilidad de nuestra Conferencia de San Vicente de '
+            'Paúl.\n\n'
+            'Tú ya has hecho una labor excelente fundando una Conferencia '
+            'en Roma, donde, guiado por tu extraordinaria intuición, has '
+            'visitado a los pobres enfermos franceses en los hospitales '
+            'de esa ciudad. Dios te dará la bendición que ya ha dado a la '
+            'primera creación: «Crezcan y multiplíquense». No basta, sin '
+            'embargo, con crecer; a medida que se extiende la Conferencia, '
+            'es preciso reforzar la unión de todos con el centro.',
+      ),
+
+      LecturaEspiritual(
+        titulo: 'Los pobres son nuestros señores y nuestros amos',
+
+        encabezado: 'De las "Conferencias Espirituales" de san Vicente de Paúl',
+
+        referencia: 'Conferencias Espirituales, XI, 725.771.273',
+
+        subtitulo: 'Los pobres nos representan al Hijo de Dios',
+
+        contenido:
+            'No hemos de considerar a un pobre campesino o a una pobre '
+            'mujer según su aspecto exterior, ni según la impresión de su '
+            'espíritu, dado que con frecuencia no tienen ni la figura ni '
+            'el espíritu de las personas educadas, pues son vulgares y '
+            'groseros. Pero dadle la vuelta a la medalla y veréis, con las '
+            'luces de la fe, que son esos los que nos representan al Hijo '
+            'de Dios, que quiso ser pobre; él casi ni tenía aspecto de '
+            'hombre en su pasión y pasó por loco entre los gentiles y por '
+            'piedra de escándalo entre los judíos; y por eso mismo pudo '
+            'definirse como el evangelista de los pobres: Evangelizare '
+            'pauperibus misit me. ¡Dios mío! ¡Qué hermoso sería ver a los '
+            'pobres, considerándolos en Dios y en el aprecio en que los '
+            'tuvo Jesucristo! Pero, si los miramos con los sentimientos '
+            'de la carne y del espíritu mundano, nos parecerán '
+            'despreciables.\n\n'
+            'El Hijo de Dios, al no poder tener sentimientos de compasión '
+            'en el estado glorioso que posee desde toda la eternidad en '
+            'el cielo, quiso hacerse hombre y pontífice nuestro para '
+            'compadecer nuestras miserias. Para reinar con él en el cielo '
+            'hemos de compadecer, como él, a sus miembros que están en la '
+            'tierra. Los misioneros, por encima de todos los sacerdotes, '
+            'deben estar llenos de ese espíritu de compasión, ya que están '
+            'obligados, por su estado y vocación, a servir a los más '
+            'desgraciados, a los más abandonados y a los hundidos en '
+            'miserias corporales y espirituales.\n\n'
+            'Y, en primer lugar, han de verse tocados en lo más vivo y '
+            'afligidos en sus corazones por las miserias del prójimo. '
+            'Segundo, es menester que esta compasión y misericordia '
+            'aparezcan en su exterior y en su rostro, a ejemplo de Nuestro '
+            'Señor, que lloró sobre la ciudad de Jerusalén por las '
+            'calamidades que la amenazaban. Tercero, hay que emplear '
+            'palabras compasivas que le hagan ver al prójimo cómo nos '
+            'interesamos por sus penas y sufrimientos. Finalmente, hemos '
+            'de socorrerle y asistirle, en la medida que podamos, en todas '
+            'sus necesidades y miserias, procurando librarle de ellas en '
+            'todo o en parte, ya que la mano tiene que hacer todo lo '
+            'posible por conformarse con el corazón.\n\n'
+            'Dios ama a los pobres y, por consiguiente, ama a quienes aman '
+            'a los pobres, pues, cuando se ama mucho a una persona, se '
+            'siente también afecto a sus amigos y servidores. Pues bien, '
+            'esta pequeña Compañía de la Misión procura dedicarse con '
+            'afecto a servir a los pobres, que son los preferidos de Dios. '
+            'Por eso, tenemos motivos para esperar que, por amor a ellos, '
+            'también nos amará Dios a nosotros. Así pues, hermanos míos, '
+            'vayamos y ocupémonos con un amor nuevo en el servicio de los '
+            'pobres, y busquemos incluso a los más pobres y abandonados. '
+            'Reconozcamos delante de Dios que son ellos nuestros señores '
+            'y nuestros amos, y que somos indignos de rendirles nuestros '
+            'pequeños servicios.',
+      ),
+    ],
+  ),
+
+  Celebracion(
+    // 11 de septiembre
+    mes: 9,
+    dia: 11,
+    nombre: 'San Juan Gabriel Perboyre',
+    tipo: 'Memoria',
+    imagen: 'assets/images/Perboyre.jpg',
+
+    rubrica: 'SAN JUAN GABRIEL PERBOYRE, sacerdote y mártir',
+
+    descripcion: 'Misionero de la Congregación de la Misión y mártir en China.',
+
+    primerasVisperas: false,
+    laudes: true,
+    eucaristia: true,
+    segundasVisperas: true,
+    lecturaEspiritual: true,
+
+    informacion: [
+      ApartadoInformacion(
+        titulo: 'Biografía breve',
+        contenido: '''Nació en Montgesty (Francia) el 5 de enero de 1802. Se ordenó sacerdote el 23 de septiembre de 1826. Se le encomendó la dirección del Seminario Interno de la Congregación de la Misión, pero él ansiaba ir a las misiones extranjeras.
+
+Desembarcó en Macao (China) el 29 de agosto de 1835. Ejerció el ministerio entre los cristianos, pese a los peligros de la persecución.
+
+Delatado por uno de sus adeptos, padeció el martirio en Uchanfú (China) el 11 de septiembre de 1840, tras prolongadas torturas.
+
+Fue beatificado el 10 de noviembre de 1889 y canonizado el 2 de junio de 1996.''',
+      ),
+    ],
+
+    lecturasEspirituales: [
+      LecturaEspiritual(
+        titulo: 'Imitar a Cristo',
+
+        encabezado:
+            'De las “Conferencias Espirituales” de San Juan Gabriel Perboyre',
+
+        referencia:
+            'Cfr. Vie du Jean-Gabriel Perboyre. París 1891, pp. 330, 290-291',
+
+        subtitulo: 'Imitar a Cristo',
+
+        contenido: '''No hay más que una cosa necesaria, Jesucristo. Meditemos sin cesar este tema, que es inagotable. Nuestro Señor nos dijo: “Yo soy el Camino”, pero ¿qué camino? El camino de la humildad, del amor, de la obediencia, de la penitencia, de la mortificación, de la perfección, de la felicidad, de la gloria. Si queremos ser perfectos, si queremos llegar a la felicidad y gloria celeste, es preciso de todo punto que vayamos por este camino. Pero para no perdernos, necesitamos una antorcha que nos ilumine. Pues bien, él nos servirá de antorcha, puesto que él es la verdad y declara que quien le sigue no anda en tinieblas, sino que tendrá luz de vida.
+
+Necesitamos, además, fuerza para sostenernos en este camino y perseverar en él. Jesús será nuestra fuerza. Él quiso convertirse en alimento dándosenos en la Eucaristía, y de ahí que nos diga: “Yo soy el Camino”. En el crucifijo, el Evangelio y la Eucaristía hallamos cuanto podemos desear, no hay otro Camino, otra Verdad ni otra Vida. A él sólo nos debemos, pues, adherir, a él solo estudiar, a él recurrir una y otra vez.
+
+“No hay más que una cosa necesaria”, nos dice Nuestro Señor en el Evangelio; ¿pero cuál es esta sola y necesaria cosa? Imitarle. No podemos alcanzar la salvación más que conformándonos a Jesucristo. Cuando hayamos muerto no se nos preguntará si hemos sido sabios, si hemos desempeñado cargos distinguidos, si hemos producido una buena impresión en el mundo; se nos preguntará si nos hemos preocupado de comprender a Jesucristo e imitarle. Si Dios no halla en nosotros rasgos que nos asemejen al divino modelo por él propuesto, nos rechazará; pero si nos hacemos semejantes a él, nos admitirá a la gloria: Jesucristo es modelo de los predestinados; los santos del cielo son sólo un reflejo de Jesucristo resucitado y glorioso, como fueron en la tierra un reflejo de Jesucristo que sufría, era humillado y obraba.
+
+Tengamos los ojos siempre fijos en Jesucristo. No nos contentemos con captar uno o dos rasgos de nuestro modelo, sino penetremos en sus sentimientos, apropiémonos todas sus virtudes. Comencemos de nuevo cada día y continuemos sin cansarnos jamás.''',
+      ),
+
+      LecturaEspiritual(
+        titulo: 'Pronta disposición para el sacrificio',
+
+        encabezado: 'De las “Conferencias Espirituales” de San Vicente de Paúl',
+
+        referencia: 'Conferencia de San Vicente, XI, 536, 281-282',
+
+        subtitulo: 'Pronta disposición para el sacrificio',
+
+        contenido: '''¿Saben qué es lo que pienso cuando oigo hablar de esas necesidades tan lejanas de las misiones extranjeras? Todos hemos oído hablar y sentimos cierto deseo de ir allá; juzgamos felices a todos los demás misioneros que han muerto como hombres apostólicos por la fundación de una nueva Iglesia. Y efectivamente, son felices porque han salvado sus almas al entregarlas por la fe y por la caridad cristiana. Todo esto es muy hermoso, muy santo: todos alaban su celo y su entusiasmo; y ahí se queda todo.
+
+Miren, padres y hermanos míos, hemos de tener en nuestro interior esta disposición, y hasta este deseo, de sufrir por Dios y por el prójimo, de consumirnos por ellos. ¡Oh, qué dichosos son aquellos a los que Dios les da estas disposiciones y deseos! Sí, padres, es menester que nos pongamos totalmente al servicio de Dios y al servicio de la gente; hemos de entregarnos a Dios para esto, consumirnos por esto, dar nuestras vidas por esto, despojarnos, por así decirlo, para revestirnos de nuevo; al menos, querer estar en esta disposición si aún no estamos en ella; estar dispuestos y preparados para ir y marchar a donde Dios quiera, bien sea a las Indias o a otra parte; en una palabra, exponernos voluntariamente en el servicio del prójimo, para dilatar el imperio de Jesucristo en las almas.
+
+Yo mismo, aunque ya soy viejo y de edad, no dejo de tener dentro de mí esta disposición y estoy dispuesto incluso a marchar a las Indias para ganar allí almas para Dios, aunque tenga que morir por el camino o en el barco. Pues ¿qué creen que Dios pide de nosotros? ¿El cuerpo? ¡Ni mucho menos! ¿Qué es lo que pide entonces? Dios pide nuestra buena voluntad, una buena y verdadera disposición para abrazar todas las ocasiones de servirle, aunque sea con peligro de nuestra vida, de tener y avivar en nosotros ese deseo del martirio, que a veces le agrada a Dios lo mismo que si lo hubiéramos sufrido realmente.
+
+¡Oh, qué bien han aprendido esta lección del sufrimiento nuestros hermanos de Varsovia, los padres Desdames y Duperroy! ¡Allí están, en medio de la guerra, de la peste, del hambre, y a pesar de todo tan firmes e inquebrantables! En las cartas que he recibido de ambos (pues me han escrito uno y otro), sólo veo una gran firmeza y una fuerza admirable en estos dos siervos de Dios.
+
+Fíjense un poco en esta pobre y miserable Compañía y en la gracia que Dios le ha concedido de que posea tales personas y tales miembros, tan fieles y tan constantes en sufrir por su amor y por amor a los demás. ¡Que su bondad y su misericordia infinita conserve a estos fieles siervos suyos en la Compañía!''',
       ),
     ],
   ),

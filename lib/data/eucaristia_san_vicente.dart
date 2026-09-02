@@ -2,7 +2,7 @@ import '../models/eucaristia.dart';
 
 const Eucaristia eucaristiaSanVicente = Eucaristia(
   fecha: '27 de septiembre',
-  titulo: 'Eucaristía',
+  titulo: 'San Vicente de Paúl, sacerdote y fundador',
   grado: 'Solemnidad',
 
   introduccion:
@@ -136,32 +136,32 @@ const Eucaristia eucaristiaSanVicente = Eucaristia(
       'nuestras súplicas:',
 
   peticionesFieles: [
-    'Por la Iglesia, por el Papa, los Obispos y todos los que prestan cualquier '
+    '🔸Por la Iglesia, por el Papa, los Obispos y todos los que prestan cualquier '
         'servicio a la Iglesia. Para que sean fortalecidos por la vida, el ejemplo '
         'y la doctrina de san Vicente de Paúl. Roguemos al Señor.',
 
-    'Por los niños de todos los pueblos. Esa multitud de inocentes que sufren en '
+    '🔸Por los niños de todos los pueblos. Esa multitud de inocentes que sufren en '
         'su carne y en su espíritu el rechazo de sus mayores, la violencia, la guerra, '
         'el martirio. Para que aprendamos que son ellos los que mejor representan '
         'al Hijo de Dios y en ellos servimos a Jesucristo. Roguemos al Señor.',
 
-    'Por el mundo de la juventud comprometida. Jóvenes que piensan e imaginan el '
+    '🔸Por el mundo de la juventud comprometida. Jóvenes que piensan e imaginan el '
         'posible mundo nuevo, donde respirar verdades limpias y gozar de la felicidad '
         'rebosante. Para que descubran en nosotros la esperanza contra toda esperanza; '
         'la vida nueva que traerá la vida nueva. Roguemos al Señor.',
 
-    'Por nuestros mayores, testimonio viviente de la generosidad de la vida, que '
+    '🔸Por nuestros mayores, testimonio viviente de la generosidad de la vida, que '
         'se pierde por haberla dado para que otros la continúen disfrutando. Para '
         'que reciban de nosotros el respeto y el cariño que se merecen para culminar '
         'sus vidas sosteniéndose en las nuestras. Roguemos al Señor.',
 
-    'Por todos aquellos que, de una u otra manera, se sienten: pobres, explotados, '
+    '🔸Por todos aquellos que, de una u otra manera, se sienten: pobres, explotados, '
         'dominados, marginados ... los enfermos, drogadictos, delincuentes, presos, '
         'vagabundos ... para que encuentren en nosotros no sólo la caridad del corazón '
         'y de las palabras sino que la manifestemos en las acciones, en el esfuerzo '
         'de nuestros brazos y en el sudor de nuestra frente. Roguemos al Señor.',
 
-    'Por toda la Familia Vicenciana para que nuestra sensibilidad sea más intensa; '
+    '🔸Por toda la Familia Vicenciana para que nuestra sensibilidad sea más intensa; '
         'para que nos interpele todo lo humano; para que no nos domine la codicia '
         'de los bienes materiales; para que contribuyamos a acabar con la necesidad '
         'de los pobres. Roguemos al Señor.',

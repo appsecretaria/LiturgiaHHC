@@ -9,6 +9,7 @@ import '../utils/navegacion.dart';
 
 import '../models/celebracion.dart';
 import '../data/himnos_san_vicente.dart';
+import '../data/himnos_federico_ozanam.dart';
 import '../models/tipo_oficio.dart';
 import '../services/oficio_service.dart';
 
@@ -125,8 +126,15 @@ class _OficioScreenState extends State<OficioScreen> {
     final celebracion = widget.celebracion;
     final oficio = obtenerOficio(widget.celebracion, widget.tipo);
 
-    final List<Himno> himnosDisponibles =
-        celebracion.mes == 9 && celebracion.dia == 27 ? himnosSanVicente : [];
+    final List<Himno> himnosDisponibles;
+
+    if (celebracion.mes == 9 && celebracion.dia == 27) {
+      himnosDisponibles = himnosSanVicente;
+    } else if (celebracion.mes == 9 && celebracion.dia == 9) {
+      himnosDisponibles = himnosFedericoOzanam;
+    } else {
+      himnosDisponibles = [];
+    }
 
     if (oficio == null) {
       return Scaffold(
@@ -465,7 +473,7 @@ class _OficioScreenState extends State<OficioScreen> {
                   final texto = linea.substring(2).trim();
 
                   return Padding(
-                    padding: const EdgeInsets.only(bottom: 12),
+                    padding: const EdgeInsets.only(bottom: 1),
                     child: RichText(
                       text: TextSpan(
                         style: TextStyle(
@@ -775,7 +783,6 @@ class _OficioScreenState extends State<OficioScreen> {
 
             if (himno.partituraUrl != null) ...[
               const SizedBox(width: 12),
-
               ElevatedButton.icon(
                 onPressed: () {
                   abrirPantalla(
@@ -797,28 +804,8 @@ class _OficioScreenState extends State<OficioScreen> {
 
         const SizedBox(height: 20),
 
-        switch (himnoSeleccionado) {
-          0 => _himnoSanVicente(),
-
-          _ => Text(
-            'Este himno todavía no tiene la letra disponible.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: tamanoTexto,
-              fontStyle: FontStyle.italic,
-            ),
-          ),
-        },
-      ],
-    );
-  }
-
-  Widget _himnoSanVicente() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
         Text(
-          'Himno a San Vicente de Paúl',
+          himno.titulo,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: tamanoTexto + 4,
@@ -828,45 +815,7 @@ class _OficioScreenState extends State<OficioScreen> {
 
         const SizedBox(height: 18),
 
-        Text(
-          'Enséñanos a amar Vicente de Paúl\n'
-          'al pobre nuestro hermano\n'
-          'como lo amaste tú. (bis)',
-          style: TextStyle(
-            fontSize: tamanoTexto,
-            height: 1.5,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-
-        SizedBox(height: 18),
-
-        Text(
-          'No sabemos sufrir con los que sufren,\n'
-          'rehusamos llorar con los que lloran,\n'
-          'ignoramos la voz que nos suplica\n'
-          'y la mano que hambrienta nos implora.\n\n'
-          'Acallamos a veces entre rezos,\n'
-          'el clamor de los pobres que nos gritan,\n'
-          'con palabras de Cristo y su Evangelio\n'
-          'que sólo es el amor lo que da vida.\n\n'
-          'Vicente de Paúl que descubriste,\n'
-          'a Cristo desvalido entre los pobres,\n'
-          'que a la luz de tu vida descubramos,\n'
-          'que ellos son nuestros Amos y Señores.',
-          style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-        ),
-
-        const SizedBox(height: 16),
-
-        Text(
-          'Letra: JAVIER ÍÑIGO, CM',
-          textAlign: TextAlign.right,
-          style: TextStyle(
-            fontSize: tamanoTexto - 3,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
+        Text(himno.letra, style: TextStyle(fontSize: tamanoTexto, height: 1.5)),
       ],
     );
   }
