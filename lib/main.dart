@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'screens/splash_screen.dart';
 import 'settings/app_settings.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final settings = AppSettings();
+  await settings.cargarPreferencias();
+
   runApp(
-    AppSettingsScope(
-      settings: AppSettings(),
-      child: const LiturgiaVicencianaApp(),
-    ),
+    AppSettingsScope(settings: settings, child: const LiturgiaVicencianaApp()),
   );
 }
 

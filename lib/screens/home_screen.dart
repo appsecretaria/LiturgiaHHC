@@ -531,82 +531,45 @@ class AjustesScreen extends StatelessWidget {
 
     return SafeArea(
       child: ListView(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(20),
         children: [
-          const SizedBox(height: 14),
-
           const Text(
-            'Ajustes',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            'Lectura',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
 
-          const SizedBox(height: 36),
+          const SizedBox(height: 24),
 
           Text(
-            'Lectura',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-          ),
-
-          const SizedBox(height: 12),
-
-          const Text(
-            'Tamaño del texto',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            'Tamaño del texto: ${settings.tamanoTexto.toInt()}',
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
           ),
 
           const SizedBox(height: 8),
 
-          RadioListTile<double>(
-            title: const Text('Pequeño'),
-            subtitle: const Text('16'),
-            value: 16,
-            groupValue: settings.tamanoTexto,
+          Slider(
+            value: settings.tamanoTexto,
+            min: 16,
+            max: 30,
+            divisions: 7,
+            label: settings.tamanoTexto.toInt().toString(),
             onChanged: (value) {
-              if (value != null) {
-                settings.cambiarTamanoTexto(value);
-              }
+              settings.cambiarTamanoTexto(value);
             },
           ),
 
-          RadioListTile<double>(
-            title: const Text('Normal'),
-            subtitle: const Text('18'),
-            value: 18,
-            groupValue: settings.tamanoTexto,
-            onChanged: (value) {
-              if (value != null) {
-                settings.cambiarTamanoTexto(value);
-              }
-            },
-          ),
-
-          RadioListTile<double>(
-            title: const Text('Grande'),
-            subtitle: const Text('20'),
-            value: 20,
-            groupValue: settings.tamanoTexto,
-            onChanged: (value) {
-              if (value != null) {
-                settings.cambiarTamanoTexto(value);
-              }
-            },
-          ),
-
-          RadioListTile<double>(
-            title: const Text('Muy grande'),
-            subtitle: const Text('22'),
-            value: 22,
-            groupValue: settings.tamanoTexto,
-            onChanged: (value) {
-              if (value != null) {
-                settings.cambiarTamanoTexto(value);
-              }
-            },
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '16',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              ),
+              Text(
+                '30',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              ),
+            ],
           ),
         ],
       ),

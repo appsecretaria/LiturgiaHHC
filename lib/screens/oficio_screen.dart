@@ -31,7 +31,6 @@ class OficioScreen extends StatefulWidget {
 class _OficioScreenState extends State<OficioScreen> {
   bool mostrarHimnosCantados = false;
   int? himnoSeleccionado;
-  bool modoOscuro = false;
   late double tamanoTexto;
   final AudioPlayer _audioPlayer = AudioPlayer();
   bool reproduciendo = false;
@@ -129,6 +128,7 @@ class _OficioScreenState extends State<OficioScreen> {
 
     final settings = AppSettingsScope.of(context);
     tamanoTexto = settings.tamanoTexto;
+    final modoOscuro = settings.modoOscuro;
 
     final List<Himno> himnosDisponibles;
 
@@ -162,430 +162,437 @@ class _OficioScreenState extends State<OficioScreen> {
               ),
             )
           : Theme.of(context),
-      child: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 48,
-          leadingWidth: 52,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back, size: 40, weight: 700),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-        ),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 40),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Text(
-                  oficio.fecha,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: tamanoTexto + 4,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                ),
-
-                const SizedBox(height: 4),
-
-                Text(
-                  celebracion.nombre,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: tamanoTexto + 9,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-
-                const SizedBox(height: 18),
-
-                const Divider(height: 1, thickness: 1),
-
-                const SizedBox(height: 1),
-
-                Row(
+      child: Builder(
+        builder: (context) {
+          return Scaffold(
+            appBar: AppBar(
+              toolbarHeight: 48,
+              leadingWidth: 52,
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back, size: 40, weight: 700),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            body: SafeArea(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 40),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    // DISMINUIR TEXTO
-                    IconButton(
-                      tooltip: 'Disminuir texto',
-                      onPressed: () {
-                        if (tamanoTexto > 14) {
-                          settings.cambiarTamanoTexto(tamanoTexto - 2);
-                        }
-                      },
-                      icon: Image.asset(
-                        modoOscuro
-                            ? 'assets/icons/menos-bn.png'
-                            : 'assets/icons/menos.png',
-                        width: 24,
-                        height: 24,
-                      ),
-                    ),
-
-                    const SizedBox(width: 4),
-
-                    // TAMAÑO ACTUAL
                     Text(
-                      '${tamanoTexto.toInt()}',
+                      oficio.fecha,
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: tamanoTexto - 1,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-
-                    const SizedBox(width: 4),
-
-                    // AUMENTAR TEXTO
-                    IconButton(
-                      tooltip: 'Aumentar texto',
-                      onPressed: () {
-                        if (tamanoTexto < 30) {
-                          settings.cambiarTamanoTexto(tamanoTexto + 2);
-                        }
-                      },
-                      icon: Image.asset(
-                        modoOscuro
-                            ? 'assets/icons/mas-bn.png'
-                            : 'assets/icons/mas.png',
-                        width: 24,
-                        height: 24,
-                      ),
-                    ),
-
-                    const Spacer(),
-
-                    // MODO CLARO / OSCURO
-                    IconButton(
-                      tooltip: modoOscuro ? 'Modo claro' : 'Modo oscuro',
-                      onPressed: () {
-                        setState(() {
-                          modoOscuro = !modoOscuro;
-                        });
-                      },
-                      icon: Image.asset(
-                        modoOscuro
-                            ? 'assets/icons/soleado-bn.png'
-                            : 'assets/icons/luna-creciente.png',
-                        width: 32,
-                        height: 32,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 1),
-
-                const Divider(height: 1, thickness: 1),
-
-                const SizedBox(height: 20),
-
-                _botonHimnoCantado(himnosDisponibles),
-
-                if (mostrarHimnosCantados && himnosDisponibles.isNotEmpty) ...[
-                  const SizedBox(height: 10),
-                  _listaHimnos(himnosDisponibles),
-                ],
-
-                const SizedBox(height: 32),
-
-                Text(
-                  oficio.titulo,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: tamanoTexto + 10,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-
-                const SizedBox(height: 28),
-
-                _tituloSeccion(context, 'Invocación inicial'),
-
-                const SizedBox(height: 12),
-
-                _versiculo(context, 'V/', 'Dios mío, ven en mi auxilio.'),
-
-                _versiculo(context, 'R/', 'Señor, date prisa en socorrerme.'),
-
-                const SizedBox(height: 18),
-
-                _versiculo(
-                  context,
-                  'V/',
-                  'Gloria al Padre, y al Hijo, y al Espíritu Santo.',
-                ),
-
-                _versiculo(
-                  context,
-                  'R/',
-                  'Como era en el principio, ahora y siempre, '
-                      'por los siglos de los siglos. Amén. Aleluya.',
-                ),
-
-                const SizedBox(height: 28),
-
-                _tituloSeccion(context, 'Himno'),
-
-                const SizedBox(height: 12),
-
-                if (himnoSeleccionado == null)
-                  Text(
-                    oficio.himnoLiturgico,
-                    style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                  )
-                else
-                  _himnoSeleccionado(himnosDisponibles),
-
-                const SizedBox(height: 28),
-
-                _antifona(context, 'Ant. 1.', oficio.antifona1),
-
-                const SizedBox(height: 24),
-
-                _cabeceraSalmo(
-                  context,
-                  titulo: oficio.salmo1Titulo,
-                  referencia: oficio.salmo1Referencia,
-                  subtitulo: oficio.salmo1Subtitulo,
-                ),
-
-                const SizedBox(height: 14),
-
-                Text(
-                  oficio.salmo1,
-                  style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                ),
-
-                const SizedBox(height: 20),
-
-                _antifona(context, 'Ant. 1.', oficio.antifona1),
-
-                const SizedBox(height: 28),
-
-                _antifona(context, 'Ant. 2.', oficio.antifona2),
-
-                const SizedBox(height: 24),
-
-                _cabeceraSalmo(
-                  context,
-                  titulo: oficio.salmo2Titulo,
-                  referencia: oficio.salmo2Referencia,
-                  subtitulo: oficio.salmo2Subtitulo,
-                ),
-
-                const SizedBox(height: 14),
-
-                Text(
-                  oficio.salmo2,
-                  style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                ),
-
-                if (oficio.rubricaSalmo2 != null) ...[
-                  const SizedBox(height: 8),
-                  Text(
-                    oficio.rubricaSalmo2!,
-                    style: TextStyle(
-                      fontSize: tamanoTexto,
-                      fontStyle: FontStyle.italic,
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
-                  ),
-                ],
-
-                const SizedBox(height: 20),
-
-                _antifona(context, 'Ant. 2.', oficio.antifona2),
-
-                const SizedBox(height: 28),
-
-                _antifona(context, 'Ant. 3.', oficio.antifona3),
-
-                if (oficio.salmo3Titulo != null) ...[
-                  const SizedBox(height: 24),
-
-                  _cabeceraSalmo(
-                    context,
-                    titulo: oficio.salmo3Titulo!,
-                    referencia: oficio.salmo3Referencia,
-                    subtitulo: oficio.salmo3Subtitulo,
-                  ),
-
-                  const SizedBox(height: 14),
-                ],
-
-                Text(
-                  oficio.salmo3,
-                  style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                ),
-
-                const SizedBox(height: 20),
-
-                _antifona(context, 'Ant. 3.', oficio.antifona3),
-
-                const SizedBox(height: 32),
-
-                _tituloSeccion(context, oficio.lecturaBreveTitulo),
-
-                if (oficio.lecturaBreveReferencia != null) ...[
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      oficio.lecturaBreveReferencia!,
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                        fontSize: tamanoTexto,
-                        fontStyle: FontStyle.italic,
+                        fontSize: tamanoTexto + 4,
+                        fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
-                  ),
-                  const SizedBox(height: 12),
-                ],
 
-                const SizedBox(height: 8),
+                    const SizedBox(height: 4),
 
-                Text(
-                  oficio.lecturaBreve,
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                ),
-
-                const SizedBox(height: 32),
-
-                _tituloSeccion(context, 'Responsorio breve'),
-
-                const SizedBox(height: 12),
-
-                ...oficio.responsorio.split('\n').map((linea) {
-                  final esVersiculo = linea.startsWith('V/');
-                  final esRespuesta = linea.startsWith('R/');
-
-                  if (!esVersiculo && !esRespuesta) {
-                    return Text(
-                      linea,
-                      style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                    );
-                  }
-
-                  final indicador = esVersiculo ? 'V/' : 'R/';
-                  final texto = linea.substring(2).trim();
-
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 1),
-                    child: RichText(
-                      text: TextSpan(
-                        style: TextStyle(
-                          fontSize: tamanoTexto,
-                          height: 1.5,
-                          color: Theme.of(context).colorScheme.onSurface,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: '$indicador ',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Theme.of(context).colorScheme.primary,
-                            ),
-                          ),
-                          TextSpan(text: texto),
-                        ],
+                    Text(
+                      celebracion.nombre,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: tamanoTexto + 5,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  );
-                }),
 
-                const SizedBox(height: 32),
+                    const SizedBox(height: 18),
 
-                _tituloSeccion(context, 'Cántico evangélico'),
+                    const Divider(height: 1, thickness: 1),
 
-                const SizedBox(height: 12),
+                    const SizedBox(height: 1),
 
-                _antifona(context, 'Ant.', oficio.antifonaCantico),
+                    Row(
+                      children: [
+                        // DISMINUIR TEXTO
+                        IconButton(
+                          tooltip: 'Disminuir texto',
+                          onPressed: () {
+                            if (tamanoTexto > 16) {
+                              settings.cambiarTamanoTexto(tamanoTexto - 2);
+                            }
+                          },
+                          icon: Image.asset(
+                            modoOscuro
+                                ? 'assets/icons/menos-bn.png'
+                                : 'assets/icons/menos.png',
+                            width: 24,
+                            height: 24,
+                          ),
+                        ),
 
-                const SizedBox(height: 22),
+                        const SizedBox(width: 4),
 
-                _cabeceraSalmo(
-                  context,
-                  titulo: oficio.canticoTitulo,
-                  referencia: oficio.canticoReferencia,
-                  subtitulo: oficio.canticoSubtitulo,
+                        // TAMAÑO ACTUAL
+                        Text(
+                          '${tamanoTexto.toInt()}',
+                          style: TextStyle(
+                            fontSize: tamanoTexto - 1,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+
+                        const SizedBox(width: 4),
+
+                        // AUMENTAR TEXTO
+                        IconButton(
+                          tooltip: 'Aumentar texto',
+                          onPressed: () {
+                            if (tamanoTexto < 30) {
+                              settings.cambiarTamanoTexto(tamanoTexto + 2);
+                            }
+                          },
+                          icon: Image.asset(
+                            modoOscuro
+                                ? 'assets/icons/mas-bn.png'
+                                : 'assets/icons/mas.png',
+                            width: 24,
+                            height: 24,
+                          ),
+                        ),
+
+                        const Spacer(),
+
+                        // MODO CLARO / OSCURO
+                        IconButton(
+                          tooltip: modoOscuro ? 'Modo claro' : 'Modo oscuro',
+                          onPressed: () {
+                            settings.cambiarModoOscuro(!modoOscuro);
+                          },
+                          icon: Image.asset(
+                            modoOscuro
+                                ? 'assets/icons/soleado-bn.png'
+                                : 'assets/icons/luna-creciente.png',
+                            width: 32,
+                            height: 32,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 1),
+
+                    const Divider(height: 1, thickness: 1),
+
+                    const SizedBox(height: 20),
+
+                    _botonHimnoCantado(himnosDisponibles),
+
+                    if (mostrarHimnosCantados &&
+                        himnosDisponibles.isNotEmpty) ...[
+                      const SizedBox(height: 10),
+                      _listaHimnos(himnosDisponibles),
+                    ],
+
+                    const SizedBox(height: 32),
+
+                    Text(
+                      oficio.titulo,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: tamanoTexto + 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                    const SizedBox(height: 28),
+
+                    _tituloSeccion(context, 'Invocación inicial'),
+
+                    const SizedBox(height: 12),
+
+                    _versiculo(context, 'V/', 'Dios mío, ven en mi auxilio.'),
+
+                    _versiculo(
+                      context,
+                      'R/',
+                      'Señor, date prisa en socorrerme.',
+                    ),
+
+                    const SizedBox(height: 18),
+
+                    _versiculo(
+                      context,
+                      'V/',
+                      'Gloria al Padre, y al Hijo, y al Espíritu Santo.',
+                    ),
+
+                    _versiculo(
+                      context,
+                      'R/',
+                      'Como era en el principio, ahora y siempre, '
+                          'por los siglos de los siglos. Amén. Aleluya.',
+                    ),
+
+                    const SizedBox(height: 28),
+
+                    _tituloSeccion(context, 'Himno'),
+
+                    const SizedBox(height: 12),
+
+                    if (himnoSeleccionado == null)
+                      Text(
+                        oficio.himnoLiturgico,
+                        style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                      )
+                    else
+                      _himnoSeleccionado(himnosDisponibles),
+
+                    const SizedBox(height: 28),
+
+                    _antifona(context, 'Ant. 1.', oficio.antifona1),
+
+                    const SizedBox(height: 24),
+
+                    _cabeceraSalmo(
+                      context,
+                      titulo: oficio.salmo1Titulo,
+                      referencia: oficio.salmo1Referencia,
+                      subtitulo: oficio.salmo1Subtitulo,
+                    ),
+
+                    const SizedBox(height: 14),
+
+                    Text(
+                      oficio.salmo1,
+                      style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    _antifona(context, 'Ant. 1.', oficio.antifona1),
+
+                    const SizedBox(height: 28),
+
+                    _antifona(context, 'Ant. 2.', oficio.antifona2),
+
+                    const SizedBox(height: 24),
+
+                    _cabeceraSalmo(
+                      context,
+                      titulo: oficio.salmo2Titulo,
+                      referencia: oficio.salmo2Referencia,
+                      subtitulo: oficio.salmo2Subtitulo,
+                    ),
+
+                    const SizedBox(height: 14),
+
+                    Text(
+                      oficio.salmo2,
+                      style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                    ),
+
+                    if (oficio.rubricaSalmo2 != null) ...[
+                      const SizedBox(height: 8),
+                      Text(
+                        oficio.rubricaSalmo2!,
+                        style: TextStyle(
+                          fontSize: tamanoTexto,
+                          fontStyle: FontStyle.italic,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                      ),
+                    ],
+
+                    const SizedBox(height: 20),
+
+                    _antifona(context, 'Ant. 2.', oficio.antifona2),
+
+                    const SizedBox(height: 28),
+
+                    _antifona(context, 'Ant. 3.', oficio.antifona3),
+
+                    if (oficio.salmo3Titulo != null) ...[
+                      const SizedBox(height: 24),
+
+                      _cabeceraSalmo(
+                        context,
+                        titulo: oficio.salmo3Titulo!,
+                        referencia: oficio.salmo3Referencia,
+                        subtitulo: oficio.salmo3Subtitulo,
+                      ),
+
+                      const SizedBox(height: 14),
+                    ],
+
+                    Text(
+                      oficio.salmo3,
+                      style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    _antifona(context, 'Ant. 3.', oficio.antifona3),
+
+                    const SizedBox(height: 32),
+
+                    _tituloSeccion(context, oficio.lecturaBreveTitulo),
+
+                    if (oficio.lecturaBreveReferencia != null) ...[
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          oficio.lecturaBreveReferencia!,
+                          textAlign: TextAlign.right,
+                          style: TextStyle(
+                            fontSize: tamanoTexto,
+                            fontStyle: FontStyle.italic,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                    ],
+
+                    const SizedBox(height: 8),
+
+                    Text(
+                      oficio.lecturaBreve,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                    ),
+
+                    const SizedBox(height: 32),
+
+                    _tituloSeccion(context, 'Responsorio breve'),
+
+                    const SizedBox(height: 12),
+
+                    ...oficio.responsorio.split('\n').map((linea) {
+                      final esVersiculo = linea.startsWith('V/');
+                      final esRespuesta = linea.startsWith('R/');
+
+                      if (!esVersiculo && !esRespuesta) {
+                        return Text(
+                          linea,
+                          style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                        );
+                      }
+
+                      final indicador = esVersiculo ? 'V/' : 'R/';
+                      final texto = linea.substring(2).trim();
+
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 1),
+                        child: RichText(
+                          text: TextSpan(
+                            style: TextStyle(
+                              fontSize: tamanoTexto,
+                              height: 1.5,
+                              color: Theme.of(context).colorScheme.onSurface,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: '$indicador ',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Theme.of(context).colorScheme.primary,
+                                ),
+                              ),
+                              TextSpan(text: texto),
+                            ],
+                          ),
+                        ),
+                      );
+                    }),
+
+                    const SizedBox(height: 32),
+
+                    _tituloSeccion(context, 'Cántico evangélico'),
+
+                    const SizedBox(height: 12),
+
+                    _antifona(context, 'Ant.', oficio.antifonaCantico),
+
+                    const SizedBox(height: 22),
+
+                    _cabeceraSalmo(
+                      context,
+                      titulo: oficio.canticoTitulo,
+                      referencia: oficio.canticoReferencia,
+                      subtitulo: oficio.canticoSubtitulo,
+                    ),
+
+                    const SizedBox(height: 14),
+
+                    Text(
+                      oficio.cantico,
+                      style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                    ),
+
+                    const SizedBox(height: 20),
+
+                    _antifona(context, 'Ant.', oficio.antifonaCantico),
+
+                    const SizedBox(height: 32),
+
+                    _tituloSeccion(context, 'Preces'),
+
+                    const SizedBox(height: 12),
+
+                    _versiculo(context, 'V/', oficio.introduccionPreces),
+
+                    const SizedBox(height: 8),
+
+                    _versiculo(context, 'R/', oficio.respuestaPreces),
+
+                    const SizedBox(height: 16),
+
+                    ...oficio.preces.map(
+                      (item) => prece(item.inicio, item.respuesta),
+                    ),
+
+                    const SizedBox(height: 24),
+
+                    if (oficio.introduccionPadreNuestro != null) ...[
+                      Text(
+                        oficio.introduccionPadreNuestro!,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                      ),
+
+                      const SizedBox(height: 16),
+                    ],
+
+                    _tituloSeccion(context, 'Padre Nuestro'),
+
+                    const SizedBox(height: 32),
+
+                    _tituloSeccion(context, 'Oración conclusiva'),
+
+                    const SizedBox(height: 12),
+
+                    Text(
+                      oficio.oracionConclusiva,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(fontSize: tamanoTexto, height: 1.5),
+                    ),
+
+                    const SizedBox(height: 32),
+
+                    _tituloSeccion(context, 'Conclusión'),
+
+                    const SizedBox(height: 12),
+
+                    _versiculo(
+                      context,
+                      'V/',
+                      'El Señor nos bendiga, nos guarde de todo mal '
+                          'y nos lleve a la vida eterna.',
+                    ),
+
+                    _versiculo(context, 'R/', 'Amén.'),
+                  ],
                 ),
-
-                const SizedBox(height: 14),
-
-                Text(
-                  oficio.cantico,
-                  style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                ),
-
-                const SizedBox(height: 20),
-
-                _antifona(context, 'Ant.', oficio.antifonaCantico),
-
-                const SizedBox(height: 32),
-
-                _tituloSeccion(context, 'Preces'),
-
-                const SizedBox(height: 12),
-
-                _versiculo(context, 'V/', oficio.introduccionPreces),
-
-                const SizedBox(height: 8),
-
-                _versiculo(context, 'R/', oficio.respuestaPreces),
-
-                const SizedBox(height: 16),
-
-                ...oficio.preces.map(
-                  (item) => prece(item.inicio, item.respuesta),
-                ),
-
-                const SizedBox(height: 24),
-
-                if (oficio.introduccionPadreNuestro != null) ...[
-                  Text(
-                    oficio.introduccionPadreNuestro!,
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                  ),
-
-                  const SizedBox(height: 16),
-                ],
-
-                _tituloSeccion(context, 'Padre Nuestro'),
-
-                const SizedBox(height: 32),
-
-                _tituloSeccion(context, 'Oración conclusiva'),
-
-                const SizedBox(height: 12),
-
-                Text(
-                  oficio.oracionConclusiva,
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(fontSize: tamanoTexto, height: 1.5),
-                ),
-
-                const SizedBox(height: 32),
-
-                _tituloSeccion(context, 'Conclusión'),
-
-                const SizedBox(height: 12),
-
-                _versiculo(
-                  context,
-                  'V/',
-                  'El Señor nos bendiga, nos guarde de todo mal '
-                      'y nos lleve a la vida eterna.',
-                ),
-
-                _versiculo(context, 'R/', 'Amén.'),
-              ],
+              ),
             ),
-          ),
-        ),
+          );
+        },
       ),
     );
   }
