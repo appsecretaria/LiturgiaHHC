@@ -26,122 +26,106 @@ class _LecturaEspiritualScreenState extends State<LecturaEspiritualScreen> {
     tamanoTexto = settings.tamanoTexto;
     final modoOscuro = settings.modoOscuro;
 
-    return Theme(
-      data: modoOscuro
-          ? ThemeData.dark(useMaterial3: true).copyWith(
-              colorScheme: ColorScheme.fromSeed(
-                seedColor: const Color(0xFF9E1B1B),
-                brightness: Brightness.dark,
-              ),
-            )
-          : Theme.of(context),
-      child: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 48,
-          leadingWidth: 52,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back, size: 40, weight: 700),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          actions: [
-            IconButton(
-              tooltip: 'Disminuir texto',
-              onPressed: () {
-                if (tamanoTexto > 16) {
-                  settings.cambiarTamanoTexto(tamanoTexto - 2);
-                }
-              },
-              icon: const Icon(Icons.text_decrease),
-            ),
-            IconButton(
-              tooltip: 'Aumentar texto',
-              onPressed: () {
-                if (tamanoTexto < 30) {
-                  settings.cambiarTamanoTexto(tamanoTexto + 2);
-                }
-              },
-              icon: const Icon(Icons.text_increase),
-            ),
-            IconButton(
-              tooltip: modoOscuro ? 'Modo claro' : 'Modo oscuro',
-              onPressed: () {
-                settings.cambiarModoOscuro(!modoOscuro);
-              },
-              icon: Icon(
-                modoOscuro
-                    ? Icons.light_mode_outlined
-                    : Icons.dark_mode_outlined,
-              ),
-            ),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 48,
+        leadingWidth: 52,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, size: 40, weight: 700),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Text(
-                  '${celebracion.dia} de ${_nombreMes(celebracion.mes)}',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: tamanoTexto + 4,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                ),
-
-                const SizedBox(height: 4),
-
-                Text(
-                  celebracion.nombre,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: tamanoTexto + 9,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-
-                const SizedBox(height: 22),
-
-                Text(
-                  'Lectura espiritual',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: tamanoTexto + 4,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-
-                const SizedBox(height: 18),
-
-                for (
-                  int i = 0;
-                  i < celebracion.lecturasEspirituales.length;
-                  i++
-                )
-                  _BotonLectura(
-                    titulo: celebracion.lecturasEspirituales[i].titulo,
-                    seleccionado: lecturaSeleccionada == i,
-                    onTap: () {
-                      setState(() {
-                        lecturaSeleccionada = i;
-                      });
-                    },
-                  ),
-
-                if (lecturaSeleccionada >= 0) ...[
-                  const SizedBox(height: 28),
-
-                  _ContenidoLectura(
-                    lectura:
-                        celebracion.lecturasEspirituales[lecturaSeleccionada],
-                  ),
-                ],
-              ],
+        actions: [
+          IconButton(
+            tooltip: 'Disminuir texto',
+            onPressed: () {
+              if (tamanoTexto > 16) {
+                settings.cambiarTamanoTexto(tamanoTexto - 2);
+              }
+            },
+            icon: const Icon(Icons.text_decrease),
+          ),
+          IconButton(
+            tooltip: 'Aumentar texto',
+            onPressed: () {
+              if (tamanoTexto < 30) {
+                settings.cambiarTamanoTexto(tamanoTexto + 2);
+              }
+            },
+            icon: const Icon(Icons.text_increase),
+          ),
+          IconButton(
+            tooltip: modoOscuro ? 'Modo claro' : 'Modo oscuro',
+            onPressed: () {
+              settings.cambiarModoOscuro(!settings.modoOscuro);
+            },
+            icon: Icon(
+              modoOscuro ? Icons.light_mode_outlined : Icons.dark_mode_outlined,
             ),
+          ),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 30),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                '${celebracion.dia} de ${_nombreMes(celebracion.mes)}',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: tamanoTexto + 4,
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+              ),
+
+              const SizedBox(height: 4),
+
+              Text(
+                celebracion.nombre,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: tamanoTexto + 9,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 22),
+
+              Text(
+                'Lectura espiritual',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: tamanoTexto + 4,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 18),
+
+              for (int i = 0; i < celebracion.lecturasEspirituales.length; i++)
+                _BotonLectura(
+                  titulo: celebracion.lecturasEspirituales[i].titulo,
+                  seleccionado: lecturaSeleccionada == i,
+                  onTap: () {
+                    setState(() {
+                      lecturaSeleccionada = i;
+                    });
+                  },
+                ),
+
+              if (lecturaSeleccionada >= 0) ...[
+                const SizedBox(height: 28),
+
+                _ContenidoLectura(
+                  lectura:
+                      celebracion.lecturasEspirituales[lecturaSeleccionada],
+                ),
+              ],
+            ],
           ),
         ),
       ),

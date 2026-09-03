@@ -19,19 +19,29 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: paginaActual,
-        children: [
-          const HoyScreen(),
-          CalendarioScreen(
-            onIrAHoy: () {
-              setState(() {
-                paginaActual = 0;
-              });
-            },
-          ),
-          const AjustesScreen(),
-        ],
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 200),
+        switchInCurve: Curves.easeIn,
+        switchOutCurve: Curves.easeOut,
+        transitionBuilder: (child, animation) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+        child: KeyedSubtree(
+          key: ValueKey<int>(paginaActual),
+          child: [
+            const HoyScreen(),
+
+            CalendarioScreen(
+              onIrAHoy: () {
+                setState(() {
+                  paginaActual = 0;
+                });
+              },
+            ),
+
+            const AjustesScreen(),
+          ][paginaActual],
+        ),
       ),
       bottomNavigationBar: NavigationBarTheme(
         data: const NavigationBarThemeData(
@@ -42,6 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
         child: NavigationBar(
           selectedIndex: paginaActual,
           onDestinationSelected: (index) {
+            if (index == paginaActual) return;
+
             setState(() {
               paginaActual = index;
             });
@@ -568,6 +580,98 @@ class AjustesScreen extends StatelessWidget {
               Text(
                 '30',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              ),
+            ],
+          ),
+          const SizedBox(height: 32),
+
+          const Divider(),
+
+          const SizedBox(height: 24),
+
+          const Text(
+            'Modo de lectura',
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          ),
+
+          const SizedBox(height: 20),
+
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () {
+                    settings.cambiarModoOscuro(false);
+                  },
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    backgroundColor: !settings.modoOscuro
+                        ? Theme.of(context).colorScheme.primary
+                        : Colors.transparent,
+                    foregroundColor: !settings.modoOscuro
+                        ? Theme.of(context).colorScheme.onPrimary
+                        : Theme.of(context).colorScheme.onSurface,
+                    side: BorderSide(
+                      width: 2,
+                      color: !settings.modoOscuro
+                          ? Theme.of(context).colorScheme.primary
+                          : Colors.grey.shade400,
+                    ),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.light_mode_outlined),
+                      SizedBox(width: 10),
+                      Text(
+                        'Claro',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(width: 14),
+
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () {
+                    settings.cambiarModoOscuro(true);
+                  },
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    backgroundColor: settings.modoOscuro
+                        ? Theme.of(context).colorScheme.primary
+                        : Colors.transparent,
+                    foregroundColor: settings.modoOscuro
+                        ? Theme.of(context).colorScheme.onPrimary
+                        : Theme.of(context).colorScheme.onSurface,
+                    side: BorderSide(
+                      width: 2,
+                      color: settings.modoOscuro
+                          ? Theme.of(context).colorScheme.primary
+                          : Colors.grey.shade400,
+                    ),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.dark_mode_outlined),
+                      SizedBox(width: 10),
+                      Text(
+                        'Oscuro',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),

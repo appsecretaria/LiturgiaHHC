@@ -36,13 +36,26 @@ class LiturgiaVicencianaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final settings = AppSettingsScope.of(context);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Liturgia Vicenciana',
+
       theme: ThemeData(
         useMaterial3: true,
         colorSchemeSeed: const Color(0xFF9E1B1B),
+        brightness: Brightness.light,
       ),
+
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: const Color(0xFF9E1B1B),
+        brightness: Brightness.dark,
+      ),
+
+      themeMode: settings.modoOscuro ? ThemeMode.dark : ThemeMode.light,
+
       home: const SplashScreen(),
     );
   }
