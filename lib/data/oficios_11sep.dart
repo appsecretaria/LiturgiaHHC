@@ -251,7 +251,7 @@ R/ Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
   // CÁNTICO EVANGÉLICO
   antifonaCantico: 'Completo en mi carne lo que le falta a los padecimientos de Cristo a favor de su cuerpo que es la Iglesia; mi gloria se encuentra en su cruz.',
 
-  canticoTitulo: 'Cántico de María',
+  canticoTitulo: 'Magníficat',
   canticoReferencia: 'Lc 1, 46-55',
   canticoSubtitulo: 'Alegría del alma en el Señor',
 
