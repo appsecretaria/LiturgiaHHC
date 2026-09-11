@@ -3,9 +3,9 @@
     "short_name": "Liturgia HHC",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#FFF8F6",
+    "theme_color": "#9E1B1B",
+    "description": "Liturgia Vicenciana de las Hijas de la Caridad",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
