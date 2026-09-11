@@ -190,7 +190,7 @@ R/ Alegraos, justos, y gozad con el Señor.''',
 
   antifonaCantico: 'Se alegran en el cielo los santos que siguieron las huellas de Cristo; y, porque lo amaron hasta derramar su sangre, reinan con el Señor eternamente.',
 
-  canticoTitulo: 'Cántico de María',
+  canticoTitulo: 'Magníficat',
   canticoReferencia: 'Lc 1, 46-55',
   canticoSubtitulo: 'ALEGRÍA DEL ALMA EN EL SEÑOR',
   cantico: '''Proclama mi alma la grandeza del Señor,
