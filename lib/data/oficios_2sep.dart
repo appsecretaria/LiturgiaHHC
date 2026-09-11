@@ -69,7 +69,7 @@ R/ Los justos viven eternamente.''',
 
   antifonaCantico: 'Dichosos los perseguidos por causa de la justicia, pues de ellos es el Reino de los Cielos.',
 
-  canticoTitulo: 'Cántico de Zacarías',
+  canticoTitulo: 'Benedictus',
   canticoReferencia: 'Lc 1, 68-79',
   canticoSubtitulo: 'EL MESÍAS Y SU PRECURSOR',
 
