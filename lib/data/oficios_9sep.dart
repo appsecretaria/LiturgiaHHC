@@ -64,7 +64,7 @@ R/ Dichoso el que cuida del pobre. En el día aciago lo librará el Señor.''',
 
   antifonaCantico: 'La señal por la que conocerán que son discípulos míos será que se amen unos a otros.',
 
-  canticoTitulo: 'Cántico de Zacarías',
+  canticoTitulo: 'Benedictus',
   canticoReferencia: 'Lc 1, 68-79',
   canticoSubtitulo: 'EL MESÍAS Y SU PRECURSOR',
 
