@@ -71,7 +71,7 @@ desde tu gloria de luz.
 
   // LECTURA BREVE
   lecturaBreveTitulo: 'Lectura breve',
-  lecturaBreveReferencia: '2Co 1, 3-5',
+  lecturaBreveReferencia: '2 Cor 1, 3-5',
   lecturaBreve: '''¡Bendito sea Dios, Padre de nuestro Señor Jesucristo, Padre de misericordia y Dios del Consuelo! Él nos alienta en nuestras luchas hasta el punto de poder nosotros alentar a los demás en cualquier lucha, repartiendo con ellos el ánimo que nosotros recibimos de Dios. Si los sufrimientos de Cristo rebosan sobre nosotros, gracias a Cristo rebosa en proporción nuestro ánimo.''',
 
   // RESPONSORIO BREVE
