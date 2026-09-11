@@ -89,7 +89,7 @@ R/ El Señor es mi fuerza y mi poder.
   // CÁNTICO EVANGÉLICO
   antifonaCantico: 'Con gran amor ha dado la vida por el Evangelio de salvación; ha abrazado con energía la cruz de Cristo, por eso ha entrado en la gloria de su Señor.',
 
-  canticoTitulo: 'Cántico de Zacarías',
+  canticoTitulo: 'Benedictus',
   canticoReferencia: 'Lc 1, 68-79',
   canticoSubtitulo: 'El Mesías y su precursor',
 
