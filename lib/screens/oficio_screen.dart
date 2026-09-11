@@ -585,39 +585,35 @@ class _OficioScreenState extends State<OficioScreen> {
     String? subtitulo,
   }) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Stack(
-          alignment: Alignment.center,
-          children: [
-            Center(
-              child: Text(
-                titulo,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: tamanoTexto + 3,
-                  fontWeight: FontWeight.bold,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-              ),
-            ),
-
-            if (referencia != null)
-              Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  referencia,
-                  style: TextStyle(
-                    fontSize: tamanoTexto,
-                    fontStyle: FontStyle.italic,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                ),
-              ),
-          ],
+        Text(
+          titulo,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: tamanoTexto + 3,
+            fontWeight: FontWeight.bold,
+            color: Theme.of(context).colorScheme.primary,
+          ),
         ),
+
+        if (referencia != null && referencia.isNotEmpty) ...[
+          const SizedBox(height: 4),
+
+          Text(
+            referencia,
+            textAlign: TextAlign.right,
+            style: TextStyle(
+              fontSize: tamanoTexto,
+              fontStyle: FontStyle.italic,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
+        ],
 
         if (subtitulo != null) ...[
           const SizedBox(height: 5),
+
           Text(
             subtitulo,
             textAlign: TextAlign.center,
