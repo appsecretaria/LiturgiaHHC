@@ -201,7 +201,7 @@ R/ Seréis discípulos míos, si os amáis unos a otros.''',
 
   antifonaCantico: 'Lo que hagan al más pequeño de los míos, a mí me lo hacen. Vengan benditos de mi Padre, reciban la herencia del Reino preparado para ustedes desde la creación del mundo.',
 
-  canticoTitulo: 'Cántico de María',
+  canticoTitulo: 'Magníficat',
   canticoReferencia: 'Lc 1, 46-55',
   canticoSubtitulo: 'ALEGRÍA DEL ALMA EN EL SEÑOR',
 
