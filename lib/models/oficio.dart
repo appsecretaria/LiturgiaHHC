@@ -1,3 +1,6 @@
+import 'tipo_oficio.dart';
+import '../data/comunes/canticos_evangelicos.dart';
+
 class PreceOficio {
   final String inicio;
   final String respuesta;
@@ -7,7 +10,7 @@ class PreceOficio {
 
 class Oficio {
   final String fecha;
-  final String titulo;
+  final TipoOficio tipo;
 
   final String himnoLiturgico;
 
@@ -32,9 +35,6 @@ class Oficio {
   final String? salmo3Referencia;
   final String? salmo3Subtitulo;
 
-  final String? canticoReferencia;
-  final String? canticoSubtitulo;
-
   final String? introduccionPadreNuestro;
 
   final String lecturaBreveTitulo;
@@ -42,11 +42,22 @@ class Oficio {
 
   final String responsorio;
 
-  final String antifonaCantico;
-  final String canticoTitulo;
-  final String cantico;
   final String? rubricaSalmo2;
   final String? lecturaBreveReferencia;
+
+  final String antifonaCantico;
+
+  String get canticoTitulo =>
+      tipo == TipoOficio.laudes ? 'Benedictus' : 'Magníficat';
+
+  String get canticoReferencia =>
+      tipo == TipoOficio.laudes ? 'Lc 1, 68-79' : 'Lc 1, 46-55';
+
+  String get canticoSubtitulo => tipo == TipoOficio.laudes
+      ? 'El Mesías y Precursor'
+      : 'Alegría del alma en el Señor';
+
+  String get cantico => tipo == TipoOficio.laudes ? benedictus : magnificat;
 
   final String introduccionPreces;
   final String respuestaPreces;
@@ -56,7 +67,7 @@ class Oficio {
 
   const Oficio({
     required this.fecha,
-    required this.titulo,
+    required this.tipo,
     required this.himnoLiturgico,
     required this.antifona1,
     required this.salmo1Titulo,
@@ -75,8 +86,6 @@ class Oficio {
     this.salmo2Subtitulo,
     this.salmo3Referencia,
     this.salmo3Subtitulo,
-    this.canticoReferencia,
-    this.canticoSubtitulo,
 
     this.lecturaBreveReferencia,
     this.introduccionPadreNuestro,
@@ -84,8 +93,7 @@ class Oficio {
     required this.lecturaBreve,
     required this.responsorio,
     required this.antifonaCantico,
-    required this.canticoTitulo,
-    required this.cantico,
+
     required this.introduccionPreces,
     required this.respuestaPreces,
     required this.preces,

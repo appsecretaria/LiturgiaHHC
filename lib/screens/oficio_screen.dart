@@ -8,8 +8,11 @@ import 'pdf_screen.dart';
 import '../utils/navegacion.dart';
 
 import '../models/celebracion.dart';
+
 import '../data/himnos_san_vicente.dart';
 import '../data/himnos_federico_ozanam.dart';
+import '../data/himnos_san_juan_gabriel_perboyre.dart';
+
 import '../models/tipo_oficio.dart';
 import '../services/oficio_service.dart';
 import '../main.dart';
@@ -136,6 +139,8 @@ class _OficioScreenState extends State<OficioScreen> {
       himnosDisponibles = himnosSanVicente;
     } else if (celebracion.mes == 9 && celebracion.dia == 9) {
       himnosDisponibles = himnosFedericoOzanam;
+    } else if (celebracion.mes == 9 && celebracion.dia == 11) {
+      himnosDisponibles = himnosSanJuanGabrielPerboyre;
     } else {
       himnosDisponibles = [];
     }
@@ -280,7 +285,7 @@ class _OficioScreenState extends State<OficioScreen> {
               const SizedBox(height: 32),
 
               Text(
-                oficio.titulo,
+                oficio.tipo.titulo,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: tamanoTexto + 10,
@@ -508,8 +513,6 @@ class _OficioScreenState extends State<OficioScreen> {
                 oficio.cantico,
                 style: TextStyle(fontSize: tamanoTexto, height: 1.5),
               ),
-
-              const SizedBox(height: 20),
 
               _antifona(context, 'Ant.', oficio.antifonaCantico),
 

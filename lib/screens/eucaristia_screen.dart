@@ -303,7 +303,29 @@ class _EucaristiaScreenState extends State<EucaristiaScreen> {
             const SizedBox(height: 28),
 
             _tituloSeccion(context, 'Oración de los fieles'),
-            _texto(eucaristia.introduccionFieles),
+            ...eucaristia.introduccionFieles.split('\n\n').asMap().entries.map((
+              entry,
+            ) {
+              final esRespuesta = entry.key == 1;
+
+              return Padding(
+                padding: EdgeInsets.only(top: esRespuesta ? 12 : 0),
+                child: Text(
+                  entry.value,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontSize: tamanoTexto,
+                    height: 1.5,
+                    fontWeight: esRespuesta
+                        ? FontWeight.bold
+                        : FontWeight.normal,
+                    fontStyle: esRespuesta
+                        ? FontStyle.italic
+                        : FontStyle.normal,
+                  ),
+                ),
+              );
+            }),
 
             const SizedBox(height: 16),
 
@@ -644,11 +666,22 @@ class _EucaristiaScreenState extends State<EucaristiaScreen> {
   }
 
   Widget _peticion(BuildContext context, String texto) {
-    const respuesta = 'Roguemos al Señor';
+    const respuestas = ['Roguemos al Señor', 'Oremos'];
 
-    final posicion = texto.indexOf(respuesta);
+    String? respuesta;
+    int posicion = -1;
 
-    if (posicion == -1) {
+    for (final posibleRespuesta in respuestas) {
+      final encontrada = texto.indexOf(posibleRespuesta);
+
+      if (encontrada != -1) {
+        respuesta = posibleRespuesta;
+        posicion = encontrada;
+        break;
+      }
+    }
+
+    if (respuesta == null) {
       return Padding(
         padding: const EdgeInsets.only(bottom: 12),
         child: Text(
@@ -674,10 +707,12 @@ class _EucaristiaScreenState extends State<EucaristiaScreen> {
           ),
           children: [
             TextSpan(text: antes),
-            const TextSpan(
+
+            TextSpan(
               text: respuesta,
-              style: TextStyle(fontStyle: FontStyle.italic),
+              style: const TextStyle(fontStyle: FontStyle.italic),
             ),
+
             TextSpan(text: despues),
           ],
         ),

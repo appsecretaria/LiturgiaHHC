@@ -16,8 +16,11 @@ Oficio? obtenerOficio(Celebracion celebracion, TipoOficio tipo) {
       case TipoOficio.laudes:
         return laudesMartires2Septiembre;
 
-      case TipoOficio.segundasVisperas:
+      case TipoOficio.visperas:
         return visperasMartires2Sep;
+
+      case TipoOficio.segundasVisperas:
+        return null;
     }
   }
   // Federico Ozanam 9 septiembre
@@ -29,8 +32,11 @@ Oficio? obtenerOficio(Celebracion celebracion, TipoOficio tipo) {
       case TipoOficio.laudes:
         return laudesFedericoOzanam9Sep;
 
-      case TipoOficio.segundasVisperas:
+      case TipoOficio.visperas:
         return visperasFedericoOzanam9Sep;
+
+      case TipoOficio.segundasVisperas:
+        return null;
     }
   }
   // Juan Gabriel Perboyre 11 septiembre
@@ -42,8 +48,11 @@ Oficio? obtenerOficio(Celebracion celebracion, TipoOficio tipo) {
       case TipoOficio.laudes:
         return laudesSanJuanGabrielPerboyre11Sep;
 
-      case TipoOficio.segundasVisperas:
+      case TipoOficio.visperas:
         return visperasSanJuanGabrielPerboyre11Sep;
+
+      case TipoOficio.segundasVisperas:
+        return null;
     }
   }
   // San Vicente de Paúl 27 septiembre
@@ -54,6 +63,9 @@ Oficio? obtenerOficio(Celebracion celebracion, TipoOficio tipo) {
 
       case TipoOficio.laudes:
         return laudesSanVicente;
+
+      case TipoOficio.visperas:
+        return null;
 
       case TipoOficio.segundasVisperas:
         return segundasVisperasSanVicente;

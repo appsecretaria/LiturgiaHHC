@@ -1,8 +1,9 @@
 import '../models/oficio.dart';
+import '../models/tipo_oficio.dart';
 
 const Oficio primerasVisperasSanVicente = Oficio(
   fecha: '26 de septiembre',
-  titulo: 'I Vísperas',
+  tipo: TipoOficio.primerasVisperas,
 
   himnoLiturgico:
       '¿Qué nuevo triunfo cantan, hoy, los cielos?\n'
@@ -151,31 +152,6 @@ const Oficio primerasVisperasSanVicente = Oficio(
       'El Espíritu del Señor está sobre mí, '
       'me envió a evangelizar a los pobres.',
 
-  canticoTitulo: 'Magníficat',
-
-  cantico:
-      'Proclama mi alma la grandeza del Señor,\n'
-      'se alegra mi espíritu en Dios, mi salvador;\n'
-      'porque ha mirado la humillación de su esclava.\n\n'
-      'Desde ahora me felicitarán todas las generaciones,\n'
-      'porque el Poderoso ha hecho obras grandes por mí:\n'
-      'su nombre es santo,\n'
-      'y su misericordia llega a sus fieles\n'
-      'de generación en generación.\n\n'
-      'Él hace proezas con su brazo:\n'
-      'dispersa a los soberbios de corazón,\n'
-      'derriba del trono a los poderosos\n'
-      'y enaltece a los humildes,\n'
-      'a los hambrientos los colma de bienes\n'
-      'y a los ricos los despide vacíos.\n\n'
-      'Auxilia a Israel, su siervo,\n'
-      'acordándose de su misericordia\n'
-      '-como lo había prometido a nuestros padres-\n'
-      'en favor de Abraham y su descendencia por siempre.\n\n'
-      'Gloria al Padre, y al Hijo, y al Espíritu Santo.\n'
-      'Como era en el principio, ahora y siempre, '
-      'por los siglos de los siglos. Amén.',
-
   introduccionPreces:
       'Al recordar con alegría a San Vicente de Paúl, '
       'imploremos la tierna bondad de Dios, para que despierte '
@@ -230,7 +206,7 @@ const Oficio primerasVisperasSanVicente = Oficio(
 
 const Oficio laudesSanVicente = Oficio(
   fecha: '27 de septiembre',
-  titulo: 'Laudes',
+  tipo: TipoOficio.laudes,
 
   himnoLiturgico:
       'Venid, pobres, que fuisteis los amores\n'
@@ -393,41 +369,6 @@ const Oficio laudesSanVicente = Oficio(
 
   antifonaCantico: 'San Vicente fue consuelo de los que sufren, defensor de los huérfanos y protector de las viudas.',
 
-  canticoTitulo: 'Benedictus',
-  canticoReferencia: 'Lc 1,68-79',
-  canticoSubtitulo: 'El Mesías y Precursor',
-
-  cantico:
-      'Bendito sea el Señor, Dios de Israel,\n'
-      'porque ha visitado y redimido a su pueblo.\n'
-      'suscitándonos una fuerza de salvación\n'
-      'en la casa de David, su siervo,\n'
-      'según lo había predicho desde antiguo\n'
-      'por boca de sus santos profetas:\n\n'
-      'Es la salvación que nos libra de nuestros enemigos\n'
-      'y de la mano de todos los que nos odian;\n'
-      'realizando la misericordia que tuvo con nuestros padres,\n'
-      'recordando su santa alianza\n'
-      'y el juramento que juró a nuestro padre Abraham.\n\n'
-      'Para concedernos que, libres de temor,\n'
-      'arrancados de la mano de los enemigos,\n'
-      'le sirvamos con santidad y justicia,\n'
-      'en su presencia, todos nuestros días.\n\n'
-      'Y a ti, niño, te llamarán Profeta del Altísimo,\n'
-      'porque irás delante del Señor\n'
-      'a preparar sus caminos,\n'
-      'anunciando a su pueblo la salvación,\n'
-      'el perdón de sus pecados.\n\n'
-      'Por la entrañable misericordia de nuestro Dios,\n'
-      'nos visitará el sol que nace de lo alto,\n'
-      'para iluminar a los que viven en tiniebla\n'
-      'y en sombra de muerte,\n'
-      'para guiar nuestros pasos\n'
-      'por el camino de la paz.\n\n'
-      'Gloria al Padre, y al Hijo, y al Espíritu Santo.\n'
-      'Como era en el principio, ahora y siempre,\n'
-      'por los siglos de los siglos. Amén.',
-
   introduccionPreces: 'Bendigamos, llenos de alegría, al Padre que encomendó a Cristo un mensaje liberador para los pobres, y digámosle:',
 
   respuestaPreces: 'Señor, guía nuestras sendas en la claridad de tu rostro.',
@@ -474,7 +415,7 @@ const Oficio laudesSanVicente = Oficio(
 
 const Oficio segundasVisperasSanVicente = Oficio(
   fecha: '27 de septiembre',
-  titulo: 'II Vísperas',
+  tipo: TipoOficio.segundasVisperas,
 
   himnoLiturgico:
       'Enséñanos a amar Vicente de Paúl\n'
@@ -590,33 +531,6 @@ const Oficio segundasVisperasSanVicente = Oficio(
       'R/ Dichoso el que cuida del pobre: en el día aciago lo pondrá a salvo el Señor.',
 
   antifonaCantico: 'Saciaré de pan a los pobres de Sión, a sus sacerdotes los vestiré de salvación, y sus santos saltarán de alegría.',
-
-  canticoTitulo: 'Magníficat',
-  canticoReferencia: 'Lc 1,46-55',
-  canticoSubtitulo: 'Alegría del alma en el Señor',
-
-  cantico:
-      'Proclama mi alma la grandeza del Señor,\n'
-      'se alegra mi espíritu en Dios, mi salvador;\n'
-      'porque ha mirado la humillación de su esclava.\n\n'
-      'Desde ahora me felicitarán todas las generaciones,\n'
-      'porque el Poderoso ha hecho obras grandes por mí:\n'
-      'su nombre es santo,\n'
-      'y su misericordia llega a sus fieles\n'
-      'de generación en generación.\n\n'
-      'El hace proezas con su brazo:\n'
-      'dispersa a los soberbios de corazón,\n'
-      'derriba del trono a los poderosos\n'
-      'y enaltece a los humildes,\n'
-      'a los hambrientos los colma de bienes\n'
-      'y a los ricos los despide vacíos.\n\n'
-      'Auxilia a Israel, su siervo,\n'
-      'acordándose de su misericordia\n'
-      '-como lo había prometido a nuestros padres-\n'
-      'en favor de Abraham y su descendencia por siempre.\n\n'
-      'Gloria al Padre, y al Hijo, y al Espíritu Santo.\n'
-      'Como era en el principio, ahora y siempre,\n'
-      'por los siglos de los siglos. Amén.',
 
   introduccionPreces:
       'Al recordar a San Vicente de Paúl con alegría, imploremos la bondad de Dios, '

@@ -3,6 +3,7 @@ import '../models/apartado_informacion.dart';
 import '../models/lectura_espiritual.dart';
 
 const celebracionesVicencianas = <Celebracion>[
+  // 2 septiembre: Beatos Luis José François y compañeros, mártires
   Celebracion(
     // 2 de septiembre
     mes: 9,
@@ -135,7 +136,7 @@ Procuremos cada uno encerrarnos en estas cinco virtudes lo mismo que los caracol
       ),
     ],
   ), // 2 Septiembre
-
+  // 9 Septiembre: Beato Federico Ozanam, laico
   Celebracion(
     // 9 de septiembre
     mes: 9,
@@ -316,6 +317,7 @@ Procuremos cada uno encerrarnos en estas cinco virtudes lo mismo que los caracol
     ],
   ),
 
+  // 11 Septiembre: San Juan Gabriel Perboyre, sacerdote y mártir
   Celebracion(
     // 11 de septiembre
     mes: 9,
@@ -390,6 +392,7 @@ Fíjense un poco en esta pobre y miserable Compañía y en la gracia que Dios le
     ],
   ),
 
+  // 27 Septiembre: San Vicente de Paúl, sacerdote
   Celebracion(
     // 27 de septiembre
     mes: 9,
@@ -605,6 +608,44 @@ Fíjense un poco en esta pobre y miserable Compañía y en la gracia que Dios le
             'los más pobres y abandonados; reconozcamos delante de Dios que '
             'son ellos nuestros señores y nuestros amos, y que somos indignos '
             'de rendirles nuestros pequeños servicios.',
+      ),
+    ],
+  ),
+
+  // 25 Octubre: Aniversario de la Dedicación de la Iglesia propia
+  Celebracion(
+    mes: 10,
+    dia: 25,
+    nombre: 'Aniversario de la Dedicación de la Iglesia propia',
+    tipo: 'Solemnidad',
+
+    rubrica: 'ANIVERSARIO DE LA DEDICACIÓN DE LA IGLESIA PROPIA',
+
+    descripcion: 'En las iglesias consagradas',
+
+    primerasVisperas: false,
+    laudes: false,
+    eucaristia: true,
+    segundasVisperas: false,
+    lecturaEspiritual: false,
+
+    informacion: [
+      ApartadoInformacion(
+        titulo: 'Sobre esta solemnidad',
+        contenido:
+            'La solemnidad del Aniversario de la Dedicación de la Iglesia '
+            'propia conmemora el día en que el templo fue solemnemente '
+            'dedicado a Dios y destinado de manera permanente al culto divino.\n\n'
+            'La celebración nos invita a mirar más allá del edificio material. '
+            'La iglesia visible es signo de la Iglesia viva, formada por todos '
+            'los bautizados. Cristo es su fundamento y nosotros, unidos a él, '
+            'somos las «piedras vivas» con las que se edifica el templo '
+            'espiritual de Dios.\n\n'
+            'Por eso, al celebrar la dedicación de una iglesia, damos gracias '
+            'por el lugar en el que la comunidad cristiana se reúne para '
+            'escuchar la Palabra de Dios, celebrar la Eucaristía y orar; '
+            'y recordamos también nuestra propia vocación a ser templos del '
+            'Espíritu Santo y morada de Dios.',
       ),
     ],
   ),

@@ -1,10 +1,11 @@
 import '../models/oficio.dart';
+import '../models/tipo_oficio.dart';
 import 'salterio/laudes_miercoles_iii.dart';
 import 'salterio/visperas_miercoles_iii.dart';
 
 const Oficio laudesFedericoOzanam9Sep = Oficio(
   fecha: '9 de septiembre',
-  titulo: 'Laudes',
+  tipo: TipoOficio.laudes,
 
   himnoLiturgico: '''Vosotros sois luz del mundo
 y ardiente sal de la tierra,
@@ -64,44 +65,6 @@ R/ Dichoso el que cuida del pobre. En el día aciago lo librará el Señor.''',
 
   antifonaCantico: 'La señal por la que conocerán que son discípulos míos será que se amen unos a otros.',
 
-  canticoTitulo: 'Benedictus',
-  canticoReferencia: 'Lc 1, 68-79',
-  canticoSubtitulo: 'EL MESÍAS Y SU PRECURSOR',
-
-  cantico: '''Bendito sea el Señor, Dios de Israel,
-porque ha visitado y redimido a su pueblo.
-suscitándonos una fuerza de salvación
-en la casa de David, su siervo,
-según lo había predicho desde antiguo
-por boca de sus santos profetas:
-
-Es la salvación que nos libra de nuestros enemigos
-y de la mano de todos los que nos odian;
-ha realizado así la misericordia que tuvo con nuestros padres,
-recordando su santa alianza
-y el juramento que juró a nuestro padre Abraham.
-
-Para concedernos que, libres de temor,
-arrancados de la mano de los enemigos,
-le sirvamos con santidad y justicia,
-en su presencia, todos nuestros días.
-
-Y a ti, niño, te llamarán Profeta del Altísimo,
-porque irás delante del Señor
-a preparar sus caminos,
-anunciando a su pueblo la salvación,
-el perdón de sus pecados.
-
-Por la entrañable misericordia de nuestro Dios,
-nos visitará el sol que nace de lo alto,
-para iluminar a los que viven en tiniebla
-y en sombra de muerte,
-para guiar nuestros pasos
-por el camino de la paz.
-
-Gloria al Padre, y al Hijo, y al Espíritu Santo.
-Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.''',
-
   introduccionPreces: '''Elevemos nuestra plegaria al Dios de la misericordia y del amor para que aumente en su Iglesia el celo por la evangelización y el servicio de los pobres, y digámosle confiadamente:''',
 
   respuestaPreces: 'Haznos testigos y mensajeros de tu salvación.',
@@ -144,8 +107,7 @@ Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.'
 
 const Oficio visperasFedericoOzanam9Sep = Oficio(
   fecha: '9 de septiembre',
-  titulo: 'Vísperas',
-
+  tipo: TipoOficio.segundasVisperas,
   himnoLiturgico: '''Cuando, Señor, el día ya declina,
 quedaos con el hombre, que, en la noche
 del tiempo y de la lucha en que camina,
@@ -200,35 +162,6 @@ V/ Gloria al Padre, y al Hijo y al Espíritu Santo.
 R/ Seréis discípulos míos, si os amáis unos a otros.''',
 
   antifonaCantico: 'Lo que hagan al más pequeño de los míos, a mí me lo hacen. Vengan benditos de mi Padre, reciban la herencia del Reino preparado para ustedes desde la creación del mundo.',
-
-  canticoTitulo: 'Magníficat',
-  canticoReferencia: 'Lc 1, 46-55',
-  canticoSubtitulo: 'ALEGRÍA DEL ALMA EN EL SEÑOR',
-
-  cantico: '''Proclama mi alma la grandeza del Señor,
-se alegra mi espíritu en Dios, mi salvador;
-porque ha mirado la humillación de su esclava.
-
-Desde ahora me felicitarán todas las generaciones,
-porque el Poderoso ha hecho obras grandes por mí:
-su nombre es santo,
-y su misericordia llega a sus fieles
-de generación en generación.
-
-El hace proezas con su brazo:
-dispersa a los soberbios de corazón,
-derriba del trono a los poderosos
-y enaltece a los humildes,
-a los hambrientos los colma de bienes
-y a los ricos los despide vacíos.
-
-Auxilia a Israel, su siervo,
-acordándose de su misericordia
-—como lo había prometido a nuestros padres—
-en favor de Abraham y su descendencia por siempre.
-
-Gloria al Padre, y al Hijo, y al Espíritu Santo.
-Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.''',
 
   introduccionPreces: '''Celebrando la memoria del bienaventurado Federico Ozanam, y recordando su amor a los pobres, dirijamos nuestra oración a Dios, nuestro Padre, y, con el corazón lleno de alegría, digámosle:''',
 
