@@ -141,13 +141,17 @@ class CelebracionScreen extends StatelessWidget {
               if (celebracion.segundasVisperas)
                 _BotonCelebracion(
                   icono: Icons.nights_stay_outlined,
-                  titulo: 'II Vísperas',
+                  titulo: celebracion.primerasVisperas
+                      ? 'II Vísperas'
+                      : 'Vísperas',
                   onTap: () {
                     abrirPantalla(
                       context,
                       OficioScreen(
                         celebracion: celebracion,
-                        tipo: TipoOficio.segundasVisperas,
+                        tipo: celebracion.primerasVisperas
+                            ? TipoOficio.segundasVisperas
+                            : TipoOficio.visperas,
                       ),
                     );
                   },

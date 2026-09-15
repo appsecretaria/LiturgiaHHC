@@ -35,19 +35,19 @@ Amén.''',
       'Alegra el alma de tu siervo, pues levanto mi alma hacia ti, Señor.',
   salmo1Titulo: 'Salmo 85',
   salmo1Referencia: null,
-  salmo1Subtitulo: 'ORACIÓN DE UN POBRE ANTE LAS ADVERSIDADES',
+  salmo1Subtitulo: 'Oración de un pobre ante las adversidades',
   salmo1: salmo85MiercolesIII,
 
   antifona2: 'Dichoso el hombre que procede con justicia y habla con rectitud.',
   salmo2Titulo: 'Cántico',
   salmo2Referencia: 'Is 33, 13-16',
-  salmo2Subtitulo: 'DIOS JUZGARÁ CON JUSTICIA',
+  salmo2Subtitulo: 'Dios juzgará con justicia',
   salmo2: canticoIsaias33MiercolesIII,
 
   antifona3: 'Aclamad al Rey y Señor.',
   salmo3Titulo: 'Salmo 97',
   salmo3Referencia: null,
-  salmo3Subtitulo: 'EL SEÑOR, JUEZ VENCEDOR',
+  salmo3Subtitulo: 'El Señor, juez vencedor',
   salmo3: salmo97MiercolesIII,
 
   lecturaBreveTitulo: 'Lectura breve',
@@ -107,7 +107,7 @@ R/ Dichoso el que cuida del pobre. En el día aciago lo librará el Señor.''',
 
 const Oficio visperasFedericoOzanam9Sep = Oficio(
   fecha: '9 de septiembre',
-  tipo: TipoOficio.segundasVisperas,
+  tipo: TipoOficio.visperas,
   himnoLiturgico: '''Cuando, Señor, el día ya declina,
 quedaos con el hombre, que, en la noche
 del tiempo y de la lucha en que camina,

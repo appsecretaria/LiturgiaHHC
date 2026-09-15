@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:just_audio/just_audio.dart';
 
 import '../models/himno.dart';
+import '../data/comunes/himnos_martires.dart';
 
 import 'pdf_screen.dart';
 import '../utils/navegacion.dart';
@@ -141,6 +142,8 @@ class _OficioScreenState extends State<OficioScreen> {
       himnosDisponibles = himnosFedericoOzanam;
     } else if (celebracion.mes == 9 && celebracion.dia == 11) {
       himnosDisponibles = himnosSanJuanGabrielPerboyre;
+    } else if (celebracion.martires) {
+      himnosDisponibles = himnosComunesMartires;
     } else {
       himnosDisponibles = [];
     }
@@ -285,7 +288,7 @@ class _OficioScreenState extends State<OficioScreen> {
               const SizedBox(height: 32),
 
               Text(
-                oficio.tipo.titulo,
+                widget.tipo.titulo,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: tamanoTexto + 10,

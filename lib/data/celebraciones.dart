@@ -10,6 +10,7 @@ const celebracionesVicencianas = <Celebracion>[
     dia: 2,
     nombre: 'Beatos Luis José François y compañeros, mártires',
     tipo: 'Memoria',
+    martires: true,
     imagen: 'assets/images/martires_2sep.jpg',
 
     rubrica: 'BEATOS LUIS JOSÉ FRANÇOIS Y COMPAÑEROS, mártires',
@@ -618,6 +619,7 @@ Fíjense un poco en esta pobre y miserable Compañía y en la gracia que Dios le
     dia: 25,
     nombre: 'Aniversario de la Dedicación de la Iglesia propia',
     tipo: 'Solemnidad',
+    imagen: 'assets/images/25oct.jpg',
 
     rubrica: 'ANIVERSARIO DE LA DEDICACIÓN DE LA IGLESIA PROPIA',
 

@@ -6,6 +6,7 @@ class Celebracion {
   final int dia;
   final String nombre;
   final String tipo;
+  final bool martires;
   final String? imagen;
   final bool primerasVisperas;
   final bool laudes;
@@ -25,6 +26,7 @@ class Celebracion {
     required this.dia,
     required this.nombre,
     required this.tipo,
+    this.martires = false,
     this.imagen,
     this.primerasVisperas = false,
     this.laudes = true,

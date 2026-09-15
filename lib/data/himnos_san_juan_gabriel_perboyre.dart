@@ -24,6 +24,7 @@ y hacer posible el Reino
 que empieza a despuntar.
 ''',
 
+    audioUrl: 'https://drive.google.com/uc?export=view&id=1m-Zv-2jVUzdi_YZ9IXfz8mYw2Dy7Hisz',
     partituraUrl: 'https://drive.google.com/uc?export=view&id=1g3WSk9qRFE-k2wVclg2LdkUsXOJACoh4',
   ),
 
@@ -45,6 +46,7 @@ por el celo desplegado
 sin pausa y sin medida.
 ''',
 
+    audioUrl: 'https://drive.google.com/uc?export=view&id=1DpVcFKgo8-NU6Djuz7zkHvYFiba3C3Fg',
     partituraUrl: 'https://drive.google.com/uc?export=view&id=1jXF-KwQHpAw8HLUzNnpwyRTzMOVTXsVk',
   ),
 ];
