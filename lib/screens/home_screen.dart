@@ -6,6 +6,11 @@ import 'celebracion_screen.dart';
 import '../utils/navegacion.dart';
 import '../main.dart';
 
+import 'package:flutter/foundation.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../services/update_service.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -15,6 +20,15 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int paginaActual = 0;
+
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _comprobarActualizacion();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +91,63 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+    );
+  }
+
+  Future<void> _comprobarActualizacion() async {
+    // En la versión web no buscamos actualizaciones de la APK.
+    if (kIsWeb) return;
+
+    final actualizacion = await UpdateService.comprobarActualizacion();
+
+    if (!mounted || actualizacion == null) return;
+
+    _mostrarDialogoActualizacion(actualizacion);
+  }
+
+  Future<void> _mostrarDialogoActualizacion(UpdateInfo actualizacion) async {
+    await showDialog<void>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text(
+            'Nueva versión disponible',
+            textAlign: TextAlign.center,
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Está disponible la versión ${actualizacion.version} '
+                'de Liturgia Vicenciana.',
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
+              Text(actualizacion.mensaje, textAlign: TextAlign.center),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Más tarde'),
+            ),
+            FilledButton(
+              onPressed: () async {
+                final url = actualizacion.apkUrl;
+
+                if (url.isEmpty) return;
+
+                final uri = Uri.parse(url);
+
+                await launchUrl(uri, mode: LaunchMode.externalApplication);
+              },
+              child: const Text('Descargar'),
+            ),
+          ],
+        );
+      },
     );
   }
 }

@@ -5,6 +5,7 @@ import '../data/oficios_san_vicente.dart';
 import '../data/oficios_2sep.dart';
 import '../data/oficios_9sep.dart';
 import '../data/oficios_11sep.dart';
+import '../data/oficios_6nov.dart';
 
 Oficio? obtenerOficio(Celebracion celebracion, TipoOficio tipo) {
   // Mártires franceses 2 septiembre
@@ -69,6 +70,23 @@ Oficio? obtenerOficio(Celebracion celebracion, TipoOficio tipo) {
 
       case TipoOficio.segundasVisperas:
         return segundasVisperasSanVicente;
+    }
+  }
+
+  // Beatos mártires españoles - 6 noviembre
+  if (celebracion.mes == 11 && celebracion.dia == 6) {
+    switch (tipo) {
+      case TipoOficio.primerasVisperas:
+        return null;
+
+      case TipoOficio.laudes:
+        return laudesMartiresEspanoles6Nov;
+
+      case TipoOficio.visperas:
+        return visperasMartiresEspanoles6Nov;
+
+      case TipoOficio.segundasVisperas:
+        return null;
     }
   }
 

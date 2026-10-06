@@ -276,9 +276,12 @@ class _EucaristiaScreenState extends State<EucaristiaScreen> {
             const SizedBox(height: 8),
 
             _tituloSeccion(context, 'Evangelio'),
+
             _encabezadoLectura(eucaristia.evangelioEncabezado),
             _referencia(context, eucaristia.evangelioReferencia),
+
             const SizedBox(height: 8),
+
             _texto(eucaristia.evangelio),
 
             const SizedBox(height: 12),
@@ -294,6 +297,42 @@ class _EucaristiaScreenState extends State<EucaristiaScreen> {
                 ),
               ),
             ),
+
+            if (eucaristia.evangelioAlternativo != null) ...[
+              const SizedBox(height: 24),
+
+              _oBien(context),
+              const SizedBox(height: 24),
+
+              _encabezadoLectura(
+                eucaristia.evangelioAlternativoEncabezado ??
+                    eucaristia.evangelioEncabezado,
+              ),
+
+              if (eucaristia.evangelioAlternativoReferencia != null)
+                _referencia(
+                  context,
+                  eucaristia.evangelioAlternativoReferencia!,
+                ),
+
+              const SizedBox(height: 8),
+
+              _texto(eucaristia.evangelioAlternativo!),
+
+              const SizedBox(height: 12),
+
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Palabra del Señor',
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    fontSize: tamanoTexto,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+            ],
 
             if (eucaristia.rubricaCredo != null) ...[
               const SizedBox(height: 18),

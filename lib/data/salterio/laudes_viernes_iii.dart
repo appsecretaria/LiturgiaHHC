@@ -53,8 +53,7 @@ ofrendas y holocaustos,
 sobre tu altar se inmolarán novillos.
 
 Gloria al Padre, y al Hijo, y al Espíritu Santo.
-Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.
-''';
+Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.''';
 
 const String canticoJeremias14ViernesIII = '''
 Mis ojos se deshacen en lágrimas,
@@ -82,8 +81,7 @@ no desprestigies tu trono glorioso;
 recuerda y no rompas tu alianza con nosotros.
 
 Gloria al Padre, y al Hijo, y al Espíritu Santo.
-Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.
-''';
+Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.''';
 
 const String salmo99ViernesIII = '''
 Aclama al Señor, tierra entera,
@@ -103,5 +101,4 @@ su misericordia es eterna,
 su fidelidad por todas las edades.»
 
 Gloria al Padre, y al Hijo, y al Espíritu Santo.
-Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.
-''';
+Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.''';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../models/celebracion.dart';
 import '../models/lectura_espiritual.dart';
@@ -177,7 +178,7 @@ class _ContenidoLectura extends StatelessWidget {
         const SizedBox(height: 14),
 
         Text(
-          '(${lectura.referencia})',
+          lectura.referencia,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: tamanoTexto - 2,
@@ -206,6 +207,38 @@ class _ContenidoLectura extends StatelessWidget {
           textAlign: TextAlign.justify,
           style: TextStyle(fontSize: tamanoTexto, height: 1.5),
         ),
+
+        if (lectura.url != null) ...[
+          const SizedBox(height: 24),
+
+          Center(
+            child: SizedBox(
+              width: 200,
+              child: FilledButton(
+                onPressed: () async {
+                  final uri = Uri.parse(lectura.url!);
+                  await launchUrl(uri, mode: LaunchMode.externalApplication);
+                },
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Icon(Icons.open_in_new),
+                    ),
+                    Center(
+                      child: Text(
+                        lectura.textoUrl ?? 'Abrir enlace',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: tamanoTexto - 1),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ],
     );
   }

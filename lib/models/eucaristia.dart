@@ -36,6 +36,10 @@ class Eucaristia {
   final String evangelioReferencia;
   final String evangelio;
 
+  final String? evangelioAlternativoEncabezado;
+  final String? evangelioAlternativoReferencia;
+  final String? evangelioAlternativo;
+
   final String? rubricaCredo;
 
   final String introduccionFieles;
@@ -93,6 +97,10 @@ class Eucaristia {
     required this.evangelioEncabezado,
     required this.evangelioReferencia,
     required this.evangelio,
+
+    this.evangelioAlternativoEncabezado,
+    this.evangelioAlternativoReferencia,
+    this.evangelioAlternativo,
 
     this.rubricaCredo,
 

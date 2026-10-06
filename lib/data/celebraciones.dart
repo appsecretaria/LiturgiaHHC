@@ -651,4 +651,90 @@ Fíjense un poco en esta pobre y miserable Compañía y en la gracia que Dios le
       ),
     ],
   ),
+
+  // 6 Noviembre: Fortunato, pbro., Adoración Cortés, Josefa Martínez y compañeros, mártires
+  Celebracion(
+    mes: 11,
+    dia: 6,
+    nombre: 'Fortunato, pbro., Adoración Cortés, Josefa Martínez y compañeros, mártires',
+    tipo: 'Memoria',
+    martires: true,
+    imagen: 'assets/images/martires_6nov.png',
+    primerasVisperas: false,
+    laudes: true,
+    eucaristia: true,
+    segundasVisperas: true,
+    lecturaEspiritual: true,
+
+    informacion: [
+      ApartadoInformacion(
+        titulo: 'Biografía breve',
+        contenido: '''
+El P. Fortunato Velasco Tobar y trece compañeros fueron martirizados en Teruel, Oviedo, Gijón, Guadalajara y Urgel entre el 13 de octubre de 1934 en Oviedo, y el 6 de diciembre de 1936 en Guadalajara.
+
+Sor Melchora Adoración Cortés Bueno y catorce compañeras, martirizadas en Madrid, fueron perseguidas por ser fieles a su fe y su vocación de Hijas de la Caridad entre el 12 de agosto de 1936 y el 11 de febrero de 1937.
+
+Sor Josefa Martínez Pérez y doce compañeras, martirizadas en Valencia, fueron perseguidas por ser fieles a su fe y su vocación entre el 18 de agosto de 1936 y el 9 de diciembre de 1936.
+''',
+      ),
+    ],
+
+    lecturasEspirituales: [
+      LecturaEspiritual(
+        titulo: 'Archivo de la Beatificación',
+        encabezado: 'Mártires de la Familia Vicenciana',
+        referencia: 'Fuente: Familia Vicenciana (FAMVIN)',
+        subtitulo: 'Mártires de la Familia Vicenciana 2017',
+        contenido: '''
+Conoce más sobre los mártires de la Familia Vicenciana beatificados en Madrid el 11 de noviembre de 2017.
+''',
+        url: 'https://famvin.org/es/category/temas-vicencianos/martires-2017/',
+        textoUrl: 'Consultar archivo',
+      ),
+
+      LecturaEspiritual(
+        titulo: 'Dispuestos a la prisión y al martirio',
+        encabezado: 'De las "Conferencias Espirituales" de san Vicente de Paúl',
+        referencia: '(Conferencias a los misioneros. 21 de febrero de 1659, XI/3, 441-443)',
+        subtitulo: 'Dispuestos a la prisión y al martirio por su misericordia',
+        contenido: '''
+Es propio del reino de Dios preferir el alma al cuerpo, el honor de Dios al del mundo. Bebamos el cáliz, abracemos la confusión, con la confianza de que todo vendrá en provecho nuestro. En fin, hay que decidirse, como el Apóstol, a escoger los tormentos, y la misma muerte, antes que separarse de la caridad de Dios. Quizás se presente la ocasión de seguir a Jesucristo y sufrir la prisión, la tortura, el fuego, el martirio; ¡benditas ocasiones, que nos ofrecen el medio de hacer que reine soberanamente el Hijo de Dios!
+
+Entreguémonos a él, os lo pido por su santo nombre, para que nos conceda la gracia de preferir las penas y la muerte al peligro tremendo de perder su amor; tal debe ser nuestra decisión desde ahora. Sí, Dios mío, si se presenta la ocasión de perder el honor, los placeres y la vida, para que Jesucristo sea conocido y servido, viviendo y reinando por doquier, hemos de estar dispuestos, por su misericordia. Hagámosle, pues, de antemano este ofrecimiento, aunque la naturaleza sienta alguna repugnancia; tengamos la confianza de que Dios nos dará fortaleza cuando la necesitemos. Os envío como corderos en medio de lobos, decía nuestro Señor a sus apóstoles. Él no quería que pensasen en la respuesta que habrían de dar a los príncipes y a los tiranos; porque entonces, les decía, se os dirá lo que tenéis que decir. No dudéis, de que así ocurrirá con vosotros en ocasiones semejantes, cuando tengáis que hablar y sufrir como perfectos cristianos.
+
+Dejémosle obrar a él y no pensemos más que en su amorosa y santa voluntad. ¡Quién nos diera el celo de santa Teresa, que hizo voto de escoger siempre la gloria de su Señor, y no sólo su gloria, sino su mayor gloria! Se presenta la ocasión de hacer una obra buena en su honor; pero se presenta luego otra de mayor importancia: ella acudía a ésta y dejaba para luego la otra. Y se comprometió de palabra y en conciencia a obrar siempre de este modo. Esa era también la norma de san Ignacio: Ad maiorem Dei gloriam.
+
+Si hay alguno entre nosotros que sienta este mismo deseo, enhorabuena; abrid vuestros corazones a esta divina inspiración y seguid este noble movimiento, que siempre os llevará hacia arriba. Los demás que se arrastran por debajo, como yo, miserable de mí, que se levanten. Entreguémonos a Dios para desear y para hacer que se extienda a nosotros el reino de Dios, que se extienda sobre el estado eclesiástico y sobre todos los pueblos; al obrar de esta forma, practicaremos lo que nuestro Señor y nuestro celo piden de nosotros por este artículo.
+
+¡Salvador mío Jesucristo, que te santificaste para que fueran santificados los hombres, que huiste de los reinos de la tierra, de sus riquezas y de su gloria y sólo pensaste en el reino de tu Padre en las almas: ¡no busco mi gloria ... sino que glorifico a mi Padre! Si tú viviste así para con un otro tú, ya que eres Dios en relación con tu Padre, ¿qué deberemos hacer nosotros para imitarte a ti, que nos sacaste del polvo y nos llamaste a observar tus consejos y aspirar a la perfección? ¡Ay, Señor! Atráenos a ti, danos la gracia de entrar en la práctica de tu ejemplo y de nuestra regla, que nos lleva a buscar el reino de Dios y su justicia y a abandonarnos a él en todo lo demás; haz que tu Padre reine en nosotros y reina tú mismo haciendo que nosotros reinemos en ti por la fe, por la esperanza y por el amor, por la humildad, por la obediencia, por la unión con tu divina majestad.
+
+Al hacer así tenemos motivos de esperar que algún día reinaremos en tu gloria, que nos has merecido con tu preciosa sangre. Esto es, lo que hemos de pedirle en la oración; y durante todo el día, desde que nos despertemos, decirse cada uno en su interior: ¿Qué hacer para que Dios reine como soberano en mi corazón? ¿Qué hacer para extender por todo el mundo el conocimiento y el amor de Jesucristo? ¡Mi buen Jesús, enséñame a hacerlo y haz que así lo haga! Cuando suene el reloj, renovemos esta oración y la resolución de trabajar en ello, y sobre todo en la Santa Misa, establecida para reconocer de forma soberana la suprema majestad de Dios y alcanzarnos las gracias necesarias para vivir y morir bajo el reino glorioso de su Hijo eterno.
+''',
+      ),
+
+      LecturaEspiritual(
+        titulo: 'El significado del martirio',
+        encabezado: 'De los sermones de san Agustín, obispo',
+        referencia: '(Sermón 335, 1-2; PL 38, 1470)',
+        subtitulo: 'El significado del martirio',
+        contenido: '''
+Tratándose de la fiesta de los santos mártires, ¿de qué podemos hablar mejor que de la gloria de los mismos? Ayúdenos el Señor de los mártires, puesto que él es su corona. Hace poco escuchamos al bienaventurado apóstol Pablo que pregonaba el grito de los mismos mártires: ¿Quién nos separará del amor de Cristo? Tal es el grito de los mártires. ¿La tribulación? ¿La angustia? ¿La persecución? ¿El hambre? ¿La desnudez? ¿Los peligros? ¿La espada? Porque está escrito: «Por ti somos mortificados todo el día y considerados como ovejas de matadero». Pero en todas estas cosas vencemos por aquel que nos amó.
+
+Éste es el grito de los mártires: soportarlo todo, no presumir de sí mismos y amar a quien es glorificado en los suyos, para que quien se gloríe, se gloríe en el Señor. Ellos conocían también lo que hace poco hemos cantado: Alegraos en el Señor y exultad, justos. Si los justos se alegran en el Señor, los injustos no saben alegrarse más que en el mundo.
+
+Pero éste es el primer ejército que hay que vencer: primero hay que vencer al placer y luego al dolor. ¿Cómo puede superar la crueldad del mundo quien es incapaz de superar sus halagos? Este mundo halaga prometiendo honores, riquezas, placer; este mundo amenaza sirviéndose del dolor, la pobreza y la humillación. Quien no desprecia lo que él promete, ¿cómo puede vencer sus amenazas? Las riquezas causan su propio deleite; ¿quién lo ignora? Pero la justicia lo tiene aún mayor.
+
+El Apóstol pasó ciertamente por alto todos los halagos del mundo, y quiso que los recordases tú, el halagado por el mundo. ¿Por qué? Porque anunciaba de antemano los combates de los mártires; aquellos combates en que vencieron la persecución, el hambre, la sed, la penuria, la deshonra y, por último, el temor de la muerte y al más cruel de los enemigos.
+
+Mas considerad, hermanos, que todo es obra del arte de Cristo. El Apóstol nos invita a preferir el amor de Cristo al del mundo. ¿Cuántas estrecheces han de pasar quienes quieren robar cosas ajenas? ¿La persecución? Ni la persecución los quiebra. El avaro dice en su corazón lo que quizá no se atreve a decir con su lengua: ¿Quién nos separa de la ambición del oro? ¿La tribulación? ¿La angustia? ¿La persecución? También los avaros pueden decir al oro: «Por ti somos llevados a la muerte día a día».
+
+Con razón, pues, dicen los santos mártires en el salmo: Júzgame, ¡oh Dios! y distingue mi causa de la de la gente malvada. Distingue, dijo, mi tribulación, pues tribulaciones las sufren también los avaros. Distingue mis persecuciones, pues las sufren también los avaros. Distingue mi hambre, pues, con tal de adquirir el oro, la sufren también los avaros. Distingue mi desnudez, pues por el oro se dejan desnudar también los avaros. Distingue mi muerte, pues por el oro mueren también los avaros.
+
+¿Qué significa: Distingue mi causa? Por ti somos llevados a la muerte día a día. Ellos sufren todo eso por el oro, nosotros por ti. La pena es igual, pero distinta la causa. Si la causa es distinta, la victoria está asegurada. Por tanto, si miramos a su causa, amaremos estas fiestas de los mártires. Amemos en ellos no sus sufrimientos, sino la causa de los mismos; pues, si amamos solamente sus sufrimientos, encontraremos a muchos que sufren cosas peores por causas malas.
+
+Pero fijémonos en la causa; mirad la cruz de Cristo; allí estaba Cristo y allí estaban los ladrones. La pena era igual, pero diferente la causa. Un ladrón creyó, otro blasfemó. El Señor, como en el tribunal, hizo de juez para ambos; al que blasfemó lo mandó al infierno; al otro lo llevó consigo al paraíso. ¿Por qué esto? Porque, aunque la pena era igual, la causa de cada uno era diferente. Elegid, pues, las causas de los mártires si queréis alcanzar la palma de los mártires.
+''',
+      ),
+    ],
+  ),
 ];

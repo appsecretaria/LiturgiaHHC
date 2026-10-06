@@ -16,11 +16,19 @@ class LecturaEspiritual {
   // Cuerpo completo de la lectura.
   final String contenido;
 
+  // Enlace externo opcional.
+  final String? url;
+
+  // Texto que aparecerá en el botón del enlace.
+  final String? textoUrl;
+
   const LecturaEspiritual({
     required this.titulo,
     required this.encabezado,
     required this.referencia,
     required this.subtitulo,
     required this.contenido,
+    this.url,
+    this.textoUrl,
   });
 }
