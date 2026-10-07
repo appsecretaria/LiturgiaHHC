@@ -47,5 +47,6 @@ app.*.map.json
 # Widget Preview related
 .widget_preview/
 
-# Clave privada de firma de Liturgia HHC
+# Firma de producción de Liturgia HHC
 liturgia-hhc-release.jks
+android/key.properties
