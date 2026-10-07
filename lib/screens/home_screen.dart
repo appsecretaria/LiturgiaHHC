@@ -10,6 +10,9 @@ import 'package:flutter/foundation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../services/update_service.dart';
+import '../services/notification_service.dart';
+
+import 'dart:async';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,13 +24,72 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int paginaActual = 0;
 
+  StreamSubscription<String>? _notificacionSubscription;
+
   @override
   void initState() {
     super.initState();
 
+    _notificacionSubscription = NotificationService
+        .instance
+        .onNotificacionSeleccionada
+        .listen(_abrirCelebracionDesdePayload);
+
+    /*WidgetsBinding.instance.addPostFrameCallback((_) {
+      _abrirCelebracionDesdeNotificacion();
+      _comprobarActualizacion();
+    });*/
+
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      _abrirCelebracionDesdeNotificacion();
       _comprobarActualizacion();
     });
+  }
+
+  void _abrirCelebracionDesdeNotificacion() {
+    final payload = NotificationService.instance.payloadInicial;
+
+    if (payload == null || payload.isEmpty) return;
+
+    final partes = payload.split('-');
+
+    if (partes.length != 2) return;
+
+    final mes = int.tryParse(partes[0]);
+    final dia = int.tryParse(partes[1]);
+
+    if (mes == null || dia == null) return;
+
+    final celebracion = obtenerCelebracion(
+      DateTime(DateTime.now().year, mes, dia),
+    );
+
+    if (celebracion == null) return;
+
+    NotificationService.instance.limpiarPayloadInicial();
+
+    abrirPantalla(context, CelebracionScreen(celebracion: celebracion));
+  }
+
+  void _abrirCelebracionDesdePayload(String payload) {
+    if (!mounted) return;
+
+    final partes = payload.split('-');
+
+    if (partes.length != 2) return;
+
+    final mes = int.tryParse(partes[0]);
+    final dia = int.tryParse(partes[1]);
+
+    if (mes == null || dia == null) return;
+
+    final celebracion = obtenerCelebracion(
+      DateTime(DateTime.now().year, mes, dia),
+    );
+
+    if (celebracion == null) return;
+
+    abrirPantalla(context, CelebracionScreen(celebracion: celebracion));
   }
 
   @override
@@ -149,6 +211,12 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       },
     );
+  }
+
+  @override
+  void dispose() {
+    _notificacionSubscription?.cancel();
+    super.dispose();
   }
 }
 
@@ -745,6 +813,92 @@ class AjustesScreen extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+
+          const SizedBox(height: 32),
+
+          const Divider(),
+
+          const SizedBox(height: 24),
+
+          const Text(
+            'Notificaciones',
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          ),
+
+          const SizedBox(height: 12),
+
+          SwitchListTile(
+            contentPadding: EdgeInsets.zero,
+            title: const Text(
+              'Celebraciones vicencianas',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
+            subtitle: const Text('Recibir un aviso el día de cada celebración'),
+            value: settings.notificacionesCelebraciones,
+            onChanged: (value) async {
+              if (value) {
+                final permitido = await NotificationService.instance
+                    .solicitarPermiso();
+
+                if (!permitido) return;
+
+                final permisoAlarmas = await NotificationService.instance
+                    .solicitarPermisoAlarmasExactas();
+
+                if (!permisoAlarmas) return;
+
+                await settings.cambiarNotificacionesCelebraciones(true);
+
+                await NotificationService.instance.programarCelebraciones(
+                  hora: settings.horaNotificacion,
+                  minuto: settings.minutoNotificacion,
+                );
+              } else {
+                await settings.cambiarNotificacionesCelebraciones(false);
+
+                await NotificationService.instance.cancelarCelebraciones();
+              }
+            },
+          ),
+
+          const SizedBox(height: 12),
+
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            enabled: settings.notificacionesCelebraciones,
+            leading: const Icon(Icons.schedule),
+            title: const Text(
+              'Hora del aviso',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            ),
+            trailing: Text(
+              settings.horaNotificacionTimeOfDay.format(context),
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: settings.notificacionesCelebraciones
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).disabledColor,
+              ),
+            ),
+            onTap: settings.notificacionesCelebraciones
+                ? () async {
+                    final nuevaHora = await showTimePicker(
+                      context: context,
+                      initialTime: settings.horaNotificacionTimeOfDay,
+                    );
+
+                    if (nuevaHora != null) {
+                      await settings.cambiarHoraNotificacion(nuevaHora);
+
+                      await NotificationService.instance.programarCelebraciones(
+                        hora: nuevaHora.hour,
+                        minuto: nuevaHora.minute,
+                      );
+                    }
+                  }
+                : null,
           ),
         ],
       ),

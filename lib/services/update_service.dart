@@ -25,9 +25,11 @@ class UpdateService {
     try {
       final packageInfo = await PackageInfo.fromPlatform();
 
-      final buildInstalado = int.tryParse(packageInfo.buildNumber) ?? 0;
+      final versionInstalada = packageInfo.version;
 
-      final response = await http.get(Uri.parse(versionUrl));
+      final response = await http
+          .get(Uri.parse(versionUrl))
+          .timeout(const Duration(seconds: 8));
 
       if (response.statusCode != 200) {
         return null;
@@ -37,14 +39,19 @@ class UpdateService {
 
       final versionDisponible = datos['version']?.toString() ?? '';
 
-      final buildDisponible = int.tryParse(datos['build'].toString()) ?? 0;
+      final buildDisponible =
+          int.tryParse(datos['build']?.toString() ?? '') ?? 0;
 
       final apkUrl = datos['apkUrl']?.toString() ?? '';
 
       final mensaje =
           datos['mensaje']?.toString() ?? 'Hay una nueva versión disponible.';
 
-      if (buildDisponible <= buildInstalado) {
+      if (versionDisponible.isEmpty) {
+        return null;
+      }
+
+      if (!_esVersionMasNueva(versionDisponible, versionInstalada)) {
         return null;
       }
 
@@ -55,9 +62,45 @@ class UpdateService {
         mensaje: mensaje,
       );
     } catch (_) {
-      // Si no hay Internet, GitHub no responde, etc.,
-      // la aplicación continúa normalmente.
+      // La comprobación de actualizaciones nunca debe impedir
+      // que la aplicación funcione normalmente.
       return null;
     }
+  }
+
+  static bool _esVersionMasNueva(String disponible, String instalada) {
+    final partesDisponible = disponible
+        .split('.')
+        .map((parte) => int.tryParse(parte) ?? 0)
+        .toList();
+
+    final partesInstalada = instalada
+        .split('.')
+        .map((parte) => int.tryParse(parte) ?? 0)
+        .toList();
+
+    final longitud = partesDisponible.length > partesInstalada.length
+        ? partesDisponible.length
+        : partesInstalada.length;
+
+    for (var i = 0; i < longitud; i++) {
+      final valorDisponible = i < partesDisponible.length
+          ? partesDisponible[i]
+          : 0;
+
+      final valorInstalado = i < partesInstalada.length
+          ? partesInstalada[i]
+          : 0;
+
+      if (valorDisponible > valorInstalado) {
+        return true;
+      }
+
+      if (valorDisponible < valorInstalado) {
+        return false;
+      }
+    }
+
+    return false;
   }
 }
