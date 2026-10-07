@@ -841,12 +841,56 @@ class AjustesScreen extends StatelessWidget {
                 final permitido = await NotificationService.instance
                     .solicitarPermiso();
 
-                if (!permitido) return;
+                if (!permitido) {
+                  if (!context.mounted) return;
+
+                  await showDialog<void>(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text('Activar notificaciones'),
+                      content: const Text(
+                        'Para recibir los avisos de las celebraciones '
+                        'vicencianas, debes permitir las notificaciones '
+                        'de Liturgia HHC en los ajustes de tu dispositivo.',
+                      ),
+                      actions: [
+                        FilledButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('Entendido'),
+                        ),
+                      ],
+                    ),
+                  );
+
+                  return;
+                }
 
                 final permisoAlarmas = await NotificationService.instance
                     .solicitarPermisoAlarmasExactas();
 
-                if (!permisoAlarmas) return;
+                if (!permisoAlarmas) {
+                  if (!context.mounted) return;
+
+                  await showDialog<void>(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text('Alarmas y recordatorios'),
+                      content: const Text(
+                        'Para recibir los avisos de las celebraciones '
+                        'a la hora elegida, puedes activar el permiso '
+                        '"Alarmas y recordatorios" en los ajustes de Android.\n\n'
+                        'Si no lo activas, seguirás recibiendo los avisos, '
+                        'pero Android podría mostrarlos algo más tarde.',
+                      ),
+                      actions: [
+                        FilledButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('Entendido'),
+                        ),
+                      ],
+                    ),
+                  );
+                }
 
                 await settings.cambiarNotificacionesCelebraciones(true);
 

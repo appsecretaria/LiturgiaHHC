@@ -50,7 +50,7 @@ desde tu gloria de luz.
 
   salmo1Titulo: 'Salmo 50',
   salmo1Referencia: null,
-  salmo1Subtitulo: 'Confesión del pecador arrepentido',
+  salmo1Subtitulo: 'Misericordia, Dios mío',
   salmo1: salmo50ViernesIII,
 
   antifona2: 'Reconocemos, Señor, nuestra impiedad; hemos pecado contra ti.',

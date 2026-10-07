@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 import 'screens/splash_screen.dart';
 import 'settings/app_settings.dart';
 import 'services/notification_service.dart';
-
-import 'package:flutter/foundation.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,20 +11,24 @@ Future<void> main() async {
   final settings = AppSettings();
   await settings.cargarPreferencias();
 
-  if (!kIsWeb) {
-    await NotificationService.instance.inicializar();
-
-    if (settings.notificacionesCelebraciones) {
-      await NotificationService.instance.programarCelebraciones(
-        hora: settings.horaNotificacion,
-        minuto: settings.minutoNotificacion,
-      );
-    }
-  }
-
   runApp(
     AppSettingsScope(settings: settings, child: const LiturgiaVicencianaApp()),
   );
+
+  if (!kIsWeb) {
+    try {
+      await NotificationService.instance.inicializar();
+
+      if (settings.notificacionesCelebraciones) {
+        await NotificationService.instance.programarCelebraciones(
+          hora: settings.horaNotificacion,
+          minuto: settings.minutoNotificacion,
+        );
+      }
+    } catch (e) {
+      debugPrint('No se pudieron programar las notificaciones: $e');
+    }
+  }
 }
 
 class AppSettingsScope extends InheritedNotifier<AppSettings> {

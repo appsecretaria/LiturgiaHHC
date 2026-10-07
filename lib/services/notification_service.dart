@@ -95,6 +95,18 @@ class NotificationService {
   }) async {
     await cancelarCelebraciones();
 
+    final androidPlugin = _notifications
+        .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin
+        >();
+
+    final permiteAlarmasExactas =
+        await androidPlugin?.canScheduleExactNotifications() ?? false;
+
+    final modoProgramacion = permiteAlarmasExactas
+        ? AndroidScheduleMode.exactAllowWhileIdle
+        : AndroidScheduleMode.inexactAllowWhileIdle;
+
     const androidDetails = AndroidNotificationDetails(
       _channelId,
       _channelName,
@@ -138,7 +150,7 @@ class NotificationService {
         body: 'Hoy celebramos a ${celebracion.nombre}.',
         scheduledDate: fechaProgramada,
         notificationDetails: notificationDetails,
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        androidScheduleMode: modoProgramacion,
         payload: '${celebracion.mes}-${celebracion.dia}',
       );
     }

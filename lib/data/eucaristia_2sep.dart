@@ -3,7 +3,7 @@ import '../models/eucaristia.dart';
 const Eucaristia eucaristiaMartires2Sep = Eucaristia(
   fecha: '2 de septiembre',
   titulo: 'Beatos Luis José François, Juan Gruyer y Pedro Renato Rogue',
-  grado: 'Memorial',
+  grado: 'Memoria',
 
   introduccion: '''Hoy recordamos a los misioneros de la Congregación de la Misión muertos como testigos de la fe durante la Revolución Francesa. Son:
 
