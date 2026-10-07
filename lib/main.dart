@@ -4,19 +4,23 @@ import 'screens/splash_screen.dart';
 import 'settings/app_settings.dart';
 import 'services/notification_service.dart';
 
+import 'package:flutter/foundation.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   final settings = AppSettings();
   await settings.cargarPreferencias();
 
-  await NotificationService.instance.inicializar();
+  if (!kIsWeb) {
+    await NotificationService.instance.inicializar();
 
-  if (settings.notificacionesCelebraciones) {
-    await NotificationService.instance.programarCelebraciones(
-      hora: settings.horaNotificacion,
-      minuto: settings.minutoNotificacion,
-    );
+    if (settings.notificacionesCelebraciones) {
+      await NotificationService.instance.programarCelebraciones(
+        hora: settings.horaNotificacion,
+        minuto: settings.minutoNotificacion,
+      );
+    }
   }
 
   runApp(
