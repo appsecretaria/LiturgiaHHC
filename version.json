@@ -1,1 +1,6 @@
-{"app_name":"liturgia_vicenciana","version":"1.0.0","build_number":"1","package_name":"liturgia_vicenciana"}
+{
+    "version": "1.0.3",
+    "build": 4,
+    "apkUrl": "https://drive.google.com/uc?export=download&id=1AqRmkMILPlYrmeHy7QsGmsPnxKsw82fk",
+    "mensaje": "Hay una nueva versión de Liturgia Vicenciana disponible."
+}
