@@ -1129,6 +1129,7 @@
     "mes": 11,
     "dia": 5,
     "santos": [
+      "SATOS ZACARÍAS E ISABEL",
       "SANTA ÁNGELA DE LA CRUZ GUERRERO GONZÁLEZ, virgen"
     ]
   },
@@ -1136,14 +1137,30 @@
     "mes": 11,
     "dia": 6,
     "santos": [
+      "MÁRTIRES DEL SIGLO XX DE LA FAMILIA VICENCIANA",
       "SANTOS PEDRO POVEDA CASTROVERDE e INOCENCIO DE LA INMACULADA CANOURA ARNAU, presbíteros, y compañeros, mártires"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 7,
+    "santos": [
+      "SAN ERNESTO, obispo"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 8,
+    "santos": [
+      "SAN CLAUDIO Y COMPAÑEROS, mártires"
     ]
   },
   {
     "mes": 11,
     "dia": 9,
     "santos": [
-      "DEDICACIÓN DE LA BASÍLICA DE LETRÁN"
+      "DEDICACIÓN DE LA BASÍLICA DE LETRÁN",
+      "NTRA. SRA. DE LA ALMUDENA, patrona de Madrid"
     ]
   },
   {
@@ -1176,6 +1193,20 @@
   },
   {
     "mes": 11,
+    "dia": 14,
+    "santos": [
+      "SANTA VENERANDA, virgen y mártir"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 15,
+    "santos": [
+      "SAN ALBERTO MAGNO, obispo y doctor de la Iglesia"
+    ]
+  },
+  {
+    "mes": 11,
     "dia": 16,
     "santos": [
       "SANTA MARGARITA DE ESCOCIA",
@@ -1186,7 +1217,28 @@
     "mes": 11,
     "dia": 17,
     "santos": [
-      "SANTA ISABEL DE HUNGRÍA, religiosa"
+      "SANTA ISABEL DE HUNGRÍA, reina y religiosa"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 18,
+    "santos": [
+      "DEDICACIÓN DE LAS BASÍLICAS DE LOS SANTOS PEDRO Y PABLO, apóstoles"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 19,
+    "santos": [
+      "SAN CRISPÍN DE ÉCIJA, obispo y mártir"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 20,
+    "santos": [
+      "SAN EDMUNDO, rey y mártir"
     ]
   },
   {
@@ -1194,6 +1246,13 @@
     "dia": 21,
     "santos": [
       "PRESENTACIÓN DE LA BIENAVENTURADA VIRGEN MARÍA"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 22,
+    "santos": [
+      "SANTA CECILIA, virgen y mártir"
     ]
   },
   {
@@ -1208,7 +1267,8 @@
     "mes": 11,
     "dia": 24,
     "santos": [
-      "SANTOS ANDRÉS DUNG-LAC, presbítero, y compañeros, mártires"
+      "SANTOS ANDRÉS DUNG-LAC, presbítero, y compañeros, mártires",
+      "SANTA FLORA, virgen y mártir"
     ]
   },
   {
@@ -1216,6 +1276,35 @@
     "dia": 25,
     "santos": [
       "SANTA CATALINA DE ALEJANDRÍA, virgen y mártir"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 26,
+    "santos": [
+      "SAN JUAN BERCHMANS, religioso"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 27,
+    "santos": [
+      "NUESTRA SEÑORA DE LA MEDALLA MILAGROSA"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 28,
+    "santos": [
+      "SANTA CATALINA LABOURÉ, virgen"
+    ]
+  },
+  {
+    "mes": 11,
+    "dia": 29,
+    "santos": [
+      "ANIVERSARIO DE LA FUNDACIÓN DE LA COMPAÑÍA DE LAS HIJAS DE LA CARIDAD",
+      "SAN SATURNINO, obispo y mártir"
     ]
   },
   {
